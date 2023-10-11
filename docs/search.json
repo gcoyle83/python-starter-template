@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Python Starter Template",
     "section": "",
-    "text": "!(https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)"
+    "text": "Basic tests"
   },
   {
     "objectID": "index.html#create-a-new-repo-from-this-template",
