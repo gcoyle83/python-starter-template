@@ -17,9 +17,9 @@ If you are looking for a template repo for Python projects that will be distribu
 > [!WARNING]  
 > This repo is a *template*. DO NOT clone it and then attempt to modify it (this will fail by design).
 
-For usage details, see the project [website](https://gcoyle83.github.io/python-starter-template/01_Usage.html).
+For usage details, see the project [website](https://gcoyle83.github.io/python-starter-template).
 
 # Documentation
-Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is kept in the `docs` directory and is built into a project website with GitHub Pages.
+Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `write_docs` directory and is rendered into a website in the `docs` folder during the (semi-automatic) build process.
 
-For documentation details, including how to edit documentation and generate a project website, see [Documentation](https://gcoyle83.github.io/python-starter-template/02_Documentation.html) and [GitHub Pages](https://gcoyle83.github.io/python-starter-template/03_GithubPages.html), respectively.
+For documentation details, including how to edit documentation and generate a website, see [Documentation](https://gcoyle83.github.io/python-starter-template/documentation.html) and [GitHub Pages](https://gcoyle83.github.io/python-starter-template/gh_pages.html), respectively.

@@ -1,0 +1,22 @@
+---
+title: "Documentation"
+---
+
+Documentation for this template is developed using [Markdown]() and [Quarto]() (an extension of Markdown). The template is set up to make the documentation build process as simple as possible. 
+
+# Install Quarto
+The current setup requires installation of Quarto on your local machine (this may change imminently, though). To install, visit the [Quarto install page](https://quarto.org/docs/get-started/) and follow instructions for your operating system. 
+
+# Author/Edit Documentation
+To create new documentation, or edit existing docs, simply open the content in the `write_docs` directory and create new `.md` or `.qmd` files as needed. For specific details about authoring these files, it is recommended to start with Quarto's [Markdown Basics](https://quarto.org/docs/authoring/markdown-basics.html) page.
+
+# Render from `write_docs` to `docs`
+The current template setup uses GitHub Pages to build a website automatically from the `docs` folder. The current settings override some of the usual defaults to enable using Quarto.
+
+While this simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later, the process is not (yet) fully automated.
+
+1. The first step is, of course, to make whatever edits are desired in the `write_docs` folder.
+1. Next, if necessary, `deactivate` from the project virtual environment in VS Code, or open a new terminal
+1. Change to the `write_docs` directory on the terminal
+1. Run the command `quarto render` - this uses the `_quarto.yml` configuration file to build the HTML version of the docs in the `docs` directory
+1. Now just commit and push your changes to GitHub, and the automated website build process will take care of the rest

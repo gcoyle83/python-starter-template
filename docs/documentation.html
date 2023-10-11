@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python Starter Template – githubpages</title>
+<title>Python Starter Template - Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,27 +109,54 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#github-pages-for-python-projects" id="toc-github-pages-for-python-projects" class="nav-link active" data-scroll-target="#github-pages-for-python-projects">Github Pages for Python Projects</a>
-  <ul class="collapse">
-  <li><a href="#quarto-for-gh-pages" id="toc-quarto-for-gh-pages" class="nav-link" data-scroll-target="#quarto-for-gh-pages">Quarto for GH Pages</a></li>
-  </ul></li>
+  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link active" data-scroll-target="#install-quarto">Install Quarto</a></li>
+  <li><a href="#authoredit-documentation" id="toc-authoredit-documentation" class="nav-link" data-scroll-target="#authoredit-documentation">Author/Edit Documentation</a></li>
+  <li><a href="#render-from-write_docs-to-docs" id="toc-render-from-write_docs-to-docs" class="nav-link" data-scroll-target="#render-from-write_docs-to-docs">Render from <code>write_docs</code> to <code>docs</code></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Documentation</h1>
+</div>
 
 
-<section id="github-pages-for-python-projects" class="level1">
-<h1>Github Pages for Python Projects</h1>
-<p>GitHub Pages are websites directly linked to a project repository.</p>
-<section id="quarto-for-gh-pages" class="level2">
-<h2 class="anchored" data-anchor-id="quarto-for-gh-pages">Quarto for GH Pages</h2>
-<p>…</p>
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>Documentation for this template is developed using <a href="">Markdown</a> and <a href="">Quarto</a> (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.</p>
+<section id="install-quarto" class="level1">
+<h1>Install Quarto</h1>
+<p>The current setup requires installation of Quarto on your local machine (this may change imminently, though). To install, visit the <a href="https://quarto.org/docs/get-started/">Quarto install page</a> and follow instructions for your operating system.</p>
 </section>
+<section id="authoredit-documentation" class="level1">
+<h1>Author/Edit Documentation</h1>
+<p>To create new documentation, or edit existing docs, simply open the content in the <code>write_docs</code> directory and create new <code>.md</code> or <code>.qmd</code> files as needed. For specific details about authoring these files, it is recommended to start with Quarto’s <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics</a> page.</p>
+</section>
+<section id="render-from-write_docs-to-docs" class="level1">
+<h1>Render from <code>write_docs</code> to <code>docs</code></h1>
+<p>The current template setup uses GitHub Pages to build a website automatically from the <code>docs</code> folder. The current settings override some of the usual defaults to enable using Quarto.</p>
+<p>While this simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later, the process is not (yet) fully automated.</p>
+<ol type="1">
+<li>The first step is, of course, to make whatever edits are desired in the <code>write_docs</code> folder.</li>
+<li>Next, if necessary, <code>deactivate</code> from the project virtual environment in VS Code, or open a new terminal</li>
+<li>Change to the <code>write_docs</code> directory on the terminal</li>
+<li>Run the command <code>quarto render</code> - this uses the <code>_quarto.yml</code> configuration file to build the HTML version of the docs in the <code>docs</code> directory</li>
+<li>Now just commit and push your changes to GitHub, and the automated website build process will take care of the rest</li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->

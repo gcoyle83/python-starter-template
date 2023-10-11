@@ -77,6 +77,13 @@
     "text": "The Python Development Group is an informal team of associates from various practices that make regular use of Python to improve and/or accelerate their workflows. Recognizing that we all face similar issues in selecting and learning about various “pieces” of the Python development process, we elected to work together toward pooling our collective experience through regular (monthly) discussion of best practices and generation of documentation around what works (or notably doesn’t work) well for Python projects.\n\nDevelopment Group Members\nThe Python Dev Group members are voluntary and unofficial. If you are interested in joining the group to participate in these discussions, please reach out to a current team member and let them know.\n\nGreg Coyle"
   },
   {
+    "objectID": "documentation.html",
+    "href": "documentation.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "Documentation for this template is developed using Markdown and Quarto (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.\n\nInstall Quarto\nThe current setup requires installation of Quarto on your local machine (this may change imminently, though). To install, visit the Quarto install page and follow instructions for your operating system.\n\n\nAuthor/Edit Documentation\nTo create new documentation, or edit existing docs, simply open the content in the write_docs directory and create new .md or .qmd files as needed. For specific details about authoring these files, it is recommended to start with Quarto’s Markdown Basics page.\n\n\nRender from write_docs to docs\nThe current template setup uses GitHub Pages to build a website automatically from the docs folder. The current settings override some of the usual defaults to enable using Quarto.\nWhile this simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later, the process is not (yet) fully automated.\n\nThe first step is, of course, to make whatever edits are desired in the write_docs folder.\nNext, if necessary, deactivate from the project virtual environment in VS Code, or open a new terminal\nChange to the write_docs directory on the terminal\nRun the command quarto render - this uses the _quarto.yml configuration file to build the HTML version of the docs in the docs directory\nNow just commit and push your changes to GitHub, and the automated website build process will take care of the rest"
+  },
+  {
     "objectID": "tools/vscode_primer.html",
     "href": "tools/vscode_primer.html",
     "title": "Getting Started with VS Code",
