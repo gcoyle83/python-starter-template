@@ -1,7 +1,9 @@
 ---
 title: "Welcome"
 ---
+
 [![Remote tests](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
+
 # Python Starter Template
 This repo provides a basic starter template for best practices developing and testing *unpackaged* Python code. Emphasis on that last point - this is **not** a Python packaging template. This template is for use with generic Python projects that want to take advantage of automated tools to improve the development process, including: 
 
@@ -27,6 +29,7 @@ Start a new GitHub repo, and select this repo from the "Repository Template" opt
 The next step is to build the virtual environment for this project locally, as follows:
 
 1. First, note that the project "requires" (by way of declaration right here), use of Python 3.12; since `venv` uses whatever Python interpreter calls it as the base, each user needs to be sure to call `venv` with Python 3.12 as the active interpreter. To do so:
+
     -  Install Python 3.12 from [python.org](https://www.python.org/downloads/)
     -  Keep all defaults when running the installer, noting the installation location should be at `C:\Users\<user>\AppData\Local\Programs\Python\Python312`
     -  Close the installer app when it is finished
@@ -47,27 +50,34 @@ The next step is to build the virtual environment for this project locally, as f
 It is important but tedious to follow formatting standards. Automated tools have been developed by those who agree with this statement (starting at Bell Labs almost 50 years ago). A [linter](https://en.wikipedia.org/wiki/Lint_(software)) is a tool for static code analysis used to flag programming errors, bugs, stylistic errors and suspicious constructs. [Pylint](https://pylint.readthedocs.io/en/stable/) is one such tool that is widely used for Python to enforce the [PEP8 Style Guide](https://peps.python.org/pep-0008/). [Black](https://black.readthedocs.io/en/stable/the_black_code_style/index.html) is another, and these two tools are [often used in parallel](https://pylint.readthedocs.io/en/latest/?badge=latest#advised-linters-alongside-pylint) to get the most benefit. The following steps will help you understand how to use these tools to improve your Python projects:
 
 1. Use `Pylint` to analyze the code in the `src` folder:
+
     ```
     pylint src
     ```
+
     This command will analyze all `*.py` files in the `src` folder. Note that the output to the terminal includes recommendations to include docstrings for modules and functions, and another recommendation to improve efficiency of the `python_version` function in `version.py`. 
     
     None of these recommendations are compliance issues, and they can be suppressed. Note the overall score is 4.62/10. Suppressing these recommendations with the `--disable` flag:
+
     ```
     pylint --disable=R,C src
     ``` 
+
     > Note, `--disable=R,C` indicates that 'refactor' and 'convention' messages should be disabled
     The resulting output should now have no suggestions, and the overall rating is 10/10
 
     Finally, only errors can be reported by passing the `--errors-only` flag
+
     ```
     pylint --errors-only src
     ```
+
     Note that know rating is returned. Try introducing an error into a module and run again to see what happens.
 
 1. Now use `black` to autoformat your Python code to PEP8 compliance. Black is "an opinionated strict subset of PEP8". While `Pylint` can be used to generate a set of recommendations or flag errors, `Black` can be used to automatically enforce formatting conventions:
 
     -  First, open `hello.py` and paste the following function into the end of the module:
+
         ```
         def my_func(x):
             """
@@ -78,7 +88,9 @@ It is important but tedious to follow formatting standards. Automated tools have
             ]
             return a*x
         ```
+
     -  Now run the command `black src`, and open `hello.py` again. Note the input has been reformatted to:
+
         ```
         def my_func(x):
             """
@@ -87,6 +99,7 @@ It is important but tedious to follow formatting standards. Automated tools have
             a = [1, 2, 3]
             return a * x
         ```
+        
 By using first `Black` and then `Pylint` in succession, much of the tedium of code review can be avoided and errors can be caught and corrected **before committing**.
 ## Unit tests with `Pytest`
 After static review, the code can be dynamically tested. The [`Pytest`](https://docs.pytest.org/en/7.4.x/index.html) package is designed to facilitate testing of Python projects from basic unit tests to full evaluation of functional requirements for complex projects. Here it is used to enable and demonstrate basic unit testing.
