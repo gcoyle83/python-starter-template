@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python Starter Template - Tools</title>
+<title>Python Starter Template - Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -61,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -71,7 +71,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Python Starter Template</span>
     </a>
   </div>
@@ -82,15 +82,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
+    <a class="nav-link" href="../index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./tools.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../tools.html" rel="" target="">
  <span class="menu-text">Tools</span></a>
   </li>  
 </ul>
@@ -109,25 +109,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#integrated-development-environments" id="toc-integrated-development-environments" class="nav-link active" data-scroll-target="#integrated-development-environments">Integrated Development Environments</a>
-  <ul class="collapse">
-  <li><a href="#vs-code" id="toc-vs-code" class="nav-link" data-scroll-target="#vs-code">VS Code</a></li>
-  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
-  </ul></li>
-  <li><a href="#package-and-environment-management" id="toc-package-and-environment-management" class="nav-link" data-scroll-target="#package-and-environment-management">Package and Environment Management</a>
-  <ul class="collapse">
-  <li><a href="#anaconda" id="toc-anaconda" class="nav-link" data-scroll-target="#anaconda">Anaconda</a></li>
-  <li><a href="#python-package-index" id="toc-python-package-index" class="nav-link" data-scroll-target="#python-package-index">Python Package Index</a></li>
-  <li><a href="#venv" id="toc-venv" class="nav-link" data-scroll-target="#venv">Venv</a></li>
-  </ul></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  <li><a href="#containerization" id="toc-containerization" class="nav-link" data-scroll-target="#containerization">Containerization</a>
-  <ul class="collapse">
-  <li><a href="#docker" id="toc-docker" class="nav-link" data-scroll-target="#docker">Docker</a></li>
-  <li><a href="#kubernetes" id="toc-kubernetes" class="nav-link" data-scroll-target="#kubernetes">Kubernetes</a></li>
-  <li><a href="#azure-container-instances" id="toc-azure-container-instances" class="nav-link" data-scroll-target="#azure-container-instances">Azure Container Instances</a></li>
-  <li><a href="#helm" id="toc-helm" class="nav-link" data-scroll-target="#helm">Helm</a></li>
-  </ul></li>
+  <li><a href="#install-quarto" id="toc-install-quarto" class="nav-link active" data-scroll-target="#install-quarto">Install Quarto</a></li>
+  <li><a href="#authoredit-documentation" id="toc-authoredit-documentation" class="nav-link" data-scroll-target="#authoredit-documentation">Author/Edit Documentation</a></li>
+  <li><a href="#render-from-write_docs-to-docs" id="toc-render-from-write_docs-to-docs" class="nav-link" data-scroll-target="#render-from-write_docs-to-docs">Render from <code>write_docs</code> to <code>docs</code></a></li>
   </ul>
 </nav>
     </div>
@@ -136,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Tools</h1>
+<h1 class="title">Documentation</h1>
 </div>
 
 
@@ -151,61 +135,28 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>There are many useful Python development tools, and we do not pretend to know them all. This section of the site offers guidance on which tools to use to get started and is based purely on our present abilities to provide guidance rather than any claims of one tool being better than any other. The tools identified and summarized here are selected based on current usage and willingness of a team member to share their knowledge here. If you like a tool that is not included in this section, please contribute content to improve the coverage here.</p>
-<section id="integrated-development-environments" class="level2">
-<h2 class="anchored" data-anchor-id="integrated-development-environments">Integrated Development Environments</h2>
-<p>Integrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The <em>recommended</em> IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder.</p>
-<section id="vs-code" class="level3">
-<h3 class="anchored" data-anchor-id="vs-code">VS Code</h3>
-<p>Visual Studio Code (VS Code) is a free multi-language IDE developed by Microsoft and is popularly used by software engineers for developing solutions in numerous languages. The VS Code extensions ecosystem is large and active - there are extensions for linting, formatting, source control, containerization, cloud computing services and much (much) more.</p>
-<p>Ready to give it a try? See our <a href="./tools/vscode_primer.html">primer on installing and setting up VS Code</a> to effectively collaborate on Python development projects.</p>
+<p>Documentation for this template is developed using <a href="">Markdown</a> and <a href="">Quarto</a> (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.</p>
+<section id="install-quarto" class="level1">
+<h1>Install Quarto</h1>
+<p>The current setup requires installation of Quarto on your local machine (this may change imminently, though). To install, visit the <a href="https://quarto.org/docs/get-started/">Quarto install page</a> and follow instructions for your operating system.</p>
 </section>
-<section id="others" class="level3">
-<h3 class="anchored" data-anchor-id="others">Others</h3>
-<p>Feel free to add short descriptions of your favorite IDE and link to a primer page here.</p>
+<section id="authoredit-documentation" class="level1">
+<h1>Author/Edit Documentation</h1>
+<p>To create new documentation, or edit existing docs, simply open the content in the <code>write_docs</code> directory and create new <code>.md</code> or <code>.qmd</code> files as needed. For specific details about authoring these files, it is recommended to start with Quarto’s <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics</a> page.</p>
 </section>
-</section>
-<section id="package-and-environment-management" class="level2">
-<h2 class="anchored" data-anchor-id="package-and-environment-management">Package and Environment Management</h2>
-<p>Perhaps more controversial than what IDE to use, what tools should you use to manage project packages and evironments?</p>
-<section id="anaconda" class="level3">
-<h3 class="anchored" data-anchor-id="anaconda">Anaconda</h3>
-<p>The much maligned but rarely defeated…</p>
-</section>
-<section id="python-package-index" class="level3">
-<h3 class="anchored" data-anchor-id="python-package-index">Python Package Index</h3>
-<p>The foundation…</p>
-</section>
-<section id="venv" class="level3">
-<h3 class="anchored" data-anchor-id="venv">Venv</h3>
-<p><a href="https://docs.python.org/3/library/venv.html">venv</a> is a core module in Python, which enables creating “virtual environments” that each have their own set of Python packages installed in their site directories. A venv is created on top of an existing Python installation (known as the ‘base’ Python). A venv may be created from a <code>requirements.txt</code> file that specifies the required packages and their versions.</p>
-</section>
-</section>
-<section id="documentation" class="level2">
-<h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
-<p>Documentation is a vital part of any Python project. See the <a href="./tools/documentation.html">documentation tools page</a> for a review of using some recommended tools for documenting your projects.</p>
-</section>
-<section id="containerization" class="level2">
-<h2 class="anchored" data-anchor-id="containerization">Containerization</h2>
-<p>Package and environment management is necessary but insufficient to ensure reproducible projects. Environments run on operating systems, which run on real or virtual machines. Containerization is a technology developed to support reproducibility and virtualization (at scale) of operating systems. The leading tools for containerization of Python (or, really, any development) projects are Docker and Kubernetes.</p>
-<section id="docker" class="level3">
-<h3 class="anchored" data-anchor-id="docker">Docker</h3>
-<p>is…</p>
-</section>
-<section id="kubernetes" class="level3">
-<h3 class="anchored" data-anchor-id="kubernetes">Kubernetes</h3>
-<p>is…</p>
-</section>
-<section id="azure-container-instances" class="level3">
-<h3 class="anchored" data-anchor-id="azure-container-instances">Azure Container Instances</h3>
-<p>is…</p>
-</section>
-<section id="helm" class="level3">
-<h3 class="anchored" data-anchor-id="helm">Helm</h3>
-<p>is…</p>
+<section id="render-from-write_docs-to-docs" class="level1">
+<h1>Render from <code>write_docs</code> to <code>docs</code></h1>
+<p>The current template setup uses GitHub Pages to build a website automatically from the <code>docs</code> folder. The current settings override some of the usual defaults to enable using Quarto.</p>
+<p>While this simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later, the process is not (yet) fully automated.</p>
+<ol type="1">
+<li>The first step is, of course, to make whatever edits are desired in the <code>write_docs</code> folder.</li>
+<li>Next, if necessary, <code>deactivate</code> from the project virtual environment in VS Code, or open a new terminal</li>
+<li>Change to the <code>write_docs</code> directory on the terminal</li>
+<li>Run the command <code>quarto render</code> - this uses the <code>_quarto.yml</code> configuration file to build the HTML version of the docs in the <code>docs</code> directory</li>
+<li>Now just commit and push your changes to GitHub, and the automated website build process will take care of the rest</li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

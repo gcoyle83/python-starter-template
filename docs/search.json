@@ -21,11 +21,32 @@
     "text": "Package and Environment Management\nPerhaps more controversial than what IDE to use, what tools should you use to manage project packages and evironments?\n\nAnaconda\nThe much maligned but rarely defeated…\n\n\nPython Package Index\nThe foundation…\n\n\nVenv\nvenv is a core module in Python, which enables creating “virtual environments” that each have their own set of Python packages installed in their site directories. A venv is created on top of an existing Python installation (known as the ‘base’ Python). A venv may be created from a requirements.txt file that specifies the required packages and their versions."
   },
   {
+    "objectID": "tools.html#documentation",
+    "href": "tools.html#documentation",
+    "title": "Tools",
+    "section": "Documentation",
+    "text": "Documentation\nDocumentation is a vital part of any Python project. See the documentation tools page for a review of using some recommended tools for documenting your projects."
+  },
+  {
     "objectID": "tools.html#containerization",
     "href": "tools.html#containerization",
     "title": "Tools",
     "section": "Containerization",
     "text": "Containerization\nPackage and environment management is necessary but insufficient to ensure reproducible projects. Environments run on operating systems, which run on real or virtual machines. Containerization is a technology developed to support reproducibility and virtualization (at scale) of operating systems. The leading tools for containerization of Python (or, really, any development) projects are Docker and Kubernetes.\n\nDocker\nis…\n\n\nKubernetes\nis…\n\n\nAzure Container Instances\nis…\n\n\nHelm\nis…"
+  },
+  {
+    "objectID": "tools/documentation.html",
+    "href": "tools/documentation.html",
+    "title": "Documentation",
+    "section": "",
+    "text": "Documentation for this template is developed using Markdown and Quarto (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.\n\nInstall Quarto\nThe current setup requires installation of Quarto on your local machine (this may change imminently, though). To install, visit the Quarto install page and follow instructions for your operating system.\n\n\nAuthor/Edit Documentation\nTo create new documentation, or edit existing docs, simply open the content in the write_docs directory and create new .md or .qmd files as needed. For specific details about authoring these files, it is recommended to start with Quarto’s Markdown Basics page.\n\n\nRender from write_docs to docs\nThe current template setup uses GitHub Pages to build a website automatically from the docs folder. The current settings override some of the usual defaults to enable using Quarto.\nWhile this simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later, the process is not (yet) fully automated.\n\nThe first step is, of course, to make whatever edits are desired in the write_docs folder.\nNext, if necessary, deactivate from the project virtual environment in VS Code, or open a new terminal\nChange to the write_docs directory on the terminal\nRun the command quarto render - this uses the _quarto.yml configuration file to build the HTML version of the docs in the docs directory\nNow just commit and push your changes to GitHub, and the automated website build process will take care of the rest"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The Python Development Group is an informal team of associates from various practices that make regular use of Python to improve and/or accelerate their workflows. Recognizing that we all face similar issues in selecting and learning about various “pieces” of the Python development process, we elected to work together toward pooling our collective experience through regular (monthly) discussion of best practices and generation of documentation around what works (or notably doesn’t work) well for Python projects.\n\nDevelopment Group Members\nThe Python Dev Group members are voluntary and unofficial. If you are interested in joining the group to participate in these discussions, please reach out to a current team member and let them know.\n\nGreg Coyle"
   },
   {
     "objectID": "index.html#create-a-new-repo-from-this-template",
@@ -61,20 +82,6 @@
     "title": "Python Starter Template",
     "section": "Remote testing",
     "text": "Remote testing\nTesting on the development system is a fundamental first step, but Python projects should also be regularly tested on remote systems to ensure that they can be reproduced “from scratch” without issue. The GitHub Workflow file checks.yml enables an automated workflow to run the above steps (build Python environment, format and lint code, run tests) on a remote GitHub “runner”."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "The Python Development Group is an informal team of associates from various practices that make regular use of Python to improve and/or accelerate their workflows. Recognizing that we all face similar issues in selecting and learning about various “pieces” of the Python development process, we elected to work together toward pooling our collective experience through regular (monthly) discussion of best practices and generation of documentation around what works (or notably doesn’t work) well for Python projects.\n\nDevelopment Group Members\nThe Python Dev Group members are voluntary and unofficial. If you are interested in joining the group to participate in these discussions, please reach out to a current team member and let them know.\n\nGreg Coyle"
-  },
-  {
-    "objectID": "documentation.html",
-    "href": "documentation.html",
-    "title": "Documentation",
-    "section": "",
-    "text": "Documentation for this template is developed using Markdown and Quarto (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.\n\nInstall Quarto\nThe current setup requires installation of Quarto on your local machine (this may change imminently, though). To install, visit the Quarto install page and follow instructions for your operating system.\n\n\nAuthor/Edit Documentation\nTo create new documentation, or edit existing docs, simply open the content in the write_docs directory and create new .md or .qmd files as needed. For specific details about authoring these files, it is recommended to start with Quarto’s Markdown Basics page.\n\n\nRender from write_docs to docs\nThe current template setup uses GitHub Pages to build a website automatically from the docs folder. The current settings override some of the usual defaults to enable using Quarto.\nWhile this simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later, the process is not (yet) fully automated.\n\nThe first step is, of course, to make whatever edits are desired in the write_docs folder.\nNext, if necessary, deactivate from the project virtual environment in VS Code, or open a new terminal\nChange to the write_docs directory on the terminal\nRun the command quarto render - this uses the _quarto.yml configuration file to build the HTML version of the docs in the docs directory\nNow just commit and push your changes to GitHub, and the automated website build process will take care of the rest"
   },
   {
     "objectID": "tools/vscode_primer.html",
