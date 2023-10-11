@@ -10,18 +10,18 @@ jobs:
     - name: Set up Python 3.12
       uses: actions/setup-python@v4
       with:
-        python-version: '3.12'
+        python-version: 3.12
     - name: Install dependencies
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Format code
+    - name: black
       run: |
         black src
         black tests
-    - name: Pylint
+    - name: pylint
       run: |
         pylint --disable=R,C src
-    - name: Tests
+    - name: pytest
       run: |
         python -m pytest -vv tests
