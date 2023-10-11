@@ -17,9 +17,9 @@ If you are looking for a template repo for Python projects that will be distribu
 > [!WARNING]  
 > This repo is a *template*. DO NOT clone it and then attempt to modify it (this will fail by design).
 
-For usage details, see the [Usage](docs/01_Usage.qmd) documentation.
+For usage details, see the [Usage](docs/01_Usage.md) documentation.
 
-## Documentation
-Another critical component of any well-developed Python project is, of course, <font color=red>documentation</font>. For this template, the documentation is kept in the `docs` directory and is developed using Markdown and Quarto.
+# Documentation
+Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is kept in the `docs` directory and is developed using Markdown and Quarto.
 
-For documentation details, including how to set up to edit documentation and generate a project website, see [Documentation](docs/02_Documentation.qmd) and [GitHub Pages](docs/03_GithubPages.qmd), respectively.
+For documentation details, including how to set up to edit documentation and generate a project website, see [Documentation](docs/02_Documentation.md) and [GitHub Pages](docs/03_GithubPages.md), respectively.
