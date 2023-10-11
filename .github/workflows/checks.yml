@@ -1,0 +1,28 @@
+name: Python application test with Github Actions
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.12
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Format code
+      run: |
+        black src
+        black tests
+    - name: Pylint
+      run: |
+        pylint --disable=R,C src
+        pylint --disable=R,C tests 
+    - name: Test with pytest
+      run: |
+        python m pytest -vv tests
