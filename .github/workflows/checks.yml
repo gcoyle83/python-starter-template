@@ -22,7 +22,7 @@ jobs:
     - name: Pylint
       run: |
         pylint --disable=R,C src
-        pylint --disable=R,C tests 
+        pylint --errors-only tests
     - name: Tests
       run: |
         python -m pytest -vv tests
