@@ -1,0 +1,16 @@
+---
+title: "Welcome"
+---
+
+This is a collaborative site for continual development of organizational guidance and reusable templates for Python projects. Similar sites for R, Julia and other useful languages will probably be helpful, but are beyond the present scope of this site. The primary objectives for development of this site were outlined at the September 2023 "hackathon" in Andover, MA, including:
+
+-  Installation and setup instructions for basic development tools (Anaconda/Miniconda, VS Code, et cetera)
+-  Recommendations for standard scaffolding of Python project repositories in GitHub, including best practices for coding standards, formatting, unit testing and project documentation
+-  Links to/recommendations for "learning paths" to help young professionals develop software/coding skills
+
+To learn more about the collaborators on the effort, see the [About page](about.qmd).
+
+Visit our [source repository](https://github.com/gcoyle83/quarto-example-site).
+
+>Website developed using Quarto.
+>To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
