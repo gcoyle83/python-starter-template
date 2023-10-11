@@ -84,6 +84,13 @@
     "text": "Remote testing\nTesting on the development system is a fundamental first step, but Python projects should also be regularly tested on remote systems to ensure that they can be reproduced “from scratch” without issue. The GitHub Workflow file checks.yml enables an automated workflow to run the above steps (build Python environment, format and lint code, run tests) on a remote GitHub “runner”."
   },
   {
+    "objectID": "index.html#documentation",
+    "href": "index.html#documentation",
+    "title": "Python Starter Template",
+    "section": "Documentation",
+    "text": "Documentation\nAnother critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is written/edited in the write_docs directory and is rendered into a website in the docs folder during the (semi-automatic) build process.\nFor documentation details, including how to edit documentation and generate a website, see the Documentation tools page."
+  },
+  {
     "objectID": "tools/vscode_primer.html",
     "href": "tools/vscode_primer.html",
     "title": "Getting Started with VS Code",

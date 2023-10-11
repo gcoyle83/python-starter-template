@@ -1,4 +1,5 @@
-[![Remote tests](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
+[![](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
+[![](https://github.com/gcoyle83/python-starter-template/actions/workflows/pages/pages-build-deployment/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/pages/pages-build-deployment)
 # Python Starter Template
 This repo provides a basic starter template for best practices developing and testing *unpackaged* Python code. Emphasis on that last point - this is **not** a Python packaging template. This template is for use with generic Python projects that want to take advantage of automated tools to improve the development process, including: 
 
@@ -22,4 +23,4 @@ For usage details, see the project [website](https://gcoyle83.github.io/python-s
 # Documentation
 Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `write_docs` directory and is rendered into a website in the `docs` folder during the (semi-automatic) build process.
 
-For documentation details, including how to edit documentation and generate a website, see [Documentation](https://gcoyle83.github.io/python-starter-template/documentation.html) and [GitHub Pages](https://gcoyle83.github.io/python-starter-template/gh_pages.html), respectively.
+For documentation details, including how to edit documentation and generate a website, see the [Documentation tools](https://gcoyle83.github.io/python-starter-template/tools/documentation.html) page.
