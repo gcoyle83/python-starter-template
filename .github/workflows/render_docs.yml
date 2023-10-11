@@ -1,0 +1,23 @@
+name: Docs
+on:
+    workflow_dispatch:
+    push:
+      branches: main
+      paths: docs/**
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Cd to write_docs
+        run: |
+          cd write_docs
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Render
+        uses: quarto-dev/quarto-actions/render@v2
+        with:
+          to: html
