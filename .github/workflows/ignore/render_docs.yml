@@ -18,3 +18,10 @@ jobs:
         uses: quarto-dev/quarto-actions/render@v2
         with:
           path: write_docs
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'Quarto'
+          git commit -am "Automated rendering by Quarto"
+          git push
+      - name: GitHub Pages
+        uses: actions/configure-pages@v3
