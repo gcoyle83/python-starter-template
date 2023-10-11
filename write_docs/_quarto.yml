@@ -1,8 +1,9 @@
 project:
   type: website
+  output-dir: ../docs
 
 website:
-  title: "Python Development Group"
+  title: "Python Starter Template"
   navbar:
     left:
       - href: index.qmd
@@ -12,7 +13,7 @@ website:
 
 format:
   html:
-    theme: slate
+    theme: solarized-dark
     css: styles.css
     toc: true
 
