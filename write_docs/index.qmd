@@ -1,4 +1,4 @@
-[![Remote tests](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
+[!(https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
 
 
 # Python Starter Template
