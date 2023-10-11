@@ -12,12 +12,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-      - name: Cd to write_docs
-        run: |
-          cd write_docs
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          to: html
+          path: write_docs
