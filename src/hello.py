@@ -21,3 +21,10 @@ def bad_formatting():
     x = [1, 2, 3, 4]
     y = [1, 2, 3, 4]
     return x + y
+
+
+def good_formatting():
+    """
+    This one's well formatted so shouldn't trigger an autocommit
+    """
+    return 2 + 2

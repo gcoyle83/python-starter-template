@@ -1,5 +1,6 @@
 [![](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
 [![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://gcoyle83.github.io/python-starter-template/)
+[![Black](https://github.com/gcoyle83/python-starter-template/actions/workflows/format.yml/badge.svg)](https://github.com/gcoyle83/python-starter-template/actions/workflows/format.yml)
 
 :::{.callout-important}
 Docs builds are now fully automated. The separate `write_docs` directory is no longer needed. Simply create/edit docs files in the `docs` folder (leave content in `docs/build-docs` alone, this folder contains the rendered site) and commit/push changes as normal. The build/deploy workflow will run automatically. For more info, see [Documentation](tools/documentation.qmd#authoredit-documentation)
