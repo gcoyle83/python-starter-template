@@ -3,7 +3,7 @@ project:
   output-dir: build-docs
 
 website:
-  title: "Python Starter Template"
+  title: "Python User's Guide"
   navbar:
     left:
       - href: index.qmd
@@ -27,6 +27,13 @@ website:
         menu:
           - href: tutorials/vscode_primer.qmd
             text: VS Code Primer
+    tools:
+      icon: github
+      menu:
+        - text: Source Repo
+          url: https://github.com/gcoyle83/python-starter-template
+        - text: Report a Bug
+          url: https://github.com/gcoyle83/python-starter-template/issues
 
 format:
   html:
