@@ -34,7 +34,8 @@ website:
           url: https://github.com/gcoyle83/python-starter-template
         - text: Report a Bug
           url: https://github.com/gcoyle83/python-starter-template/issues
-
+  back-to-top-navigation: true
+  
 format:
   html:
     theme: solarized-dark
