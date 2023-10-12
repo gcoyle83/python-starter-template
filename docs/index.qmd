@@ -6,11 +6,10 @@
 This repo provides a basic starter template for best practices developing and testing *unpackaged* Python code. Emphasis on that last point - this is **not** a Python packaging template. This template is for use with generic Python projects that want to take advantage of automated tools to improve the development process, including: 
 
 -  Virtual environment management with `venv`
--  Code formatting and linting with `Pylint` and `Black`
+-  Automated code review with `Pylint` and `Black`
 -  Functional tests with `Pytest`
 -  Remote tests to support reproducibility (via GitHub Actions)
-
-If you are looking for a template repo for Python projects that will be distributed as packaged libraries, [maybe we should create one](https://packaging.python.org/en/latest/overview/)...
+-  Automated project documentation rendering with Quarto
 
 :::{.callout-note}
 Many of the concepts implemented here are directly from the excellent Duke University Coursera Course by Noah Gift: [*Cloud Computing Foundations*](https://coursera.org/share/0e44a583040b010e6aeb674febbac00e)
@@ -112,9 +111,7 @@ After static review, the code can be dynamically tested. The [`Pytest`](https://
 Testing on the development system is a fundamental first step, but Python projects should also be regularly tested on remote systems to ensure that they can be reproduced "from scratch" without issue. The GitHub Workflow file `checks.yml` enables an automated workflow to run the above steps (build Python environment, format and lint code, run tests) on a remote GitHub "runner". 
 
 ## Documentation
-Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `write_docs` directory and is rendered into a website in the `docs` folder during the (semi-automatic) build process.
-
-For documentation details, including how to edit documentation and generate a website, see the [Documentation tools](tools/documentation.qmd) page.
+Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `docs` directory (by humans) and is then automatically rendered into a website stored in the `build-docs` folder during the fully automated build process. More details on this procedure are included in the [documentation tools](tools/documentation.qmd) page.
 
 # Older boilerplate
 This is a collaborative site for continual development of organizational guidance and reusable templates for Python projects. Similar sites for R, Julia and other useful languages will probably be helpful, but are beyond the present scope of this site. The primary objectives for development of this site were outlined at the September 2023 "hackathon" in Andover, MA, including:
