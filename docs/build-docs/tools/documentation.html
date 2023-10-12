@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python User’s Guide - Package and Environment Managers</title>
+<title>Python User’s Guide - Documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tools">    
         <li>
-    <a class="dropdown-item" href="../tools/overview.qmd" rel="" target="">
+    <a class="dropdown-item" href="../tools/overview.html" rel="" target="">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
@@ -111,11 +111,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Version Control</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tools/documentation.qmd" rel="" target="">
+    <a class="dropdown-item" href="../tools/documentation.html" rel="" target="">
  <span class="dropdown-text">Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tools/containers.qmd" rel="" target="">
+    <a class="dropdown-item" href="../tools/containers.html" rel="" target="">
  <span class="dropdown-text">Containerization</span></a>
   </li>  
     </ul>
@@ -152,12 +152,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#python-package-index" id="toc-python-package-index" class="nav-link active" data-scroll-target="#python-package-index">Python Package Index</a></li>
-  <li><a href="#venv" id="toc-venv" class="nav-link" data-scroll-target="#venv">Venv</a></li>
-  <li><a href="#anaconda" id="toc-anaconda" class="nav-link" data-scroll-target="#anaconda">Anaconda</a>
-  <ul class="collapse">
-  <li><a href="#miniconda" id="toc-miniconda" class="nav-link" data-scroll-target="#miniconda">Miniconda</a></li>
-  </ul></li>
+  <li><a href="#authoredit-documentation" id="toc-authoredit-documentation" class="nav-link active" data-scroll-target="#authoredit-documentation">Author/Edit Documentation</a></li>
+  <li><a href="#quarto" id="toc-quarto" class="nav-link" data-scroll-target="#quarto">Quarto</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/gcoyle83/python-starter-template/issues" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -166,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Package and Environment Managers</h1>
+<h1 class="title">Documentation</h1>
 </div>
 
 
@@ -181,24 +177,34 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (<em>dependency hell</em>).</p>
-<section id="python-package-index" class="level2">
-<h2 class="anchored" data-anchor-id="python-package-index">Python Package Index</h2>
-<p>The foundation…</p>
+<p>Documentation for this template is developed using <a href="">Markdown</a> and <a href="">Quarto</a> (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.</p>
+<section id="authoredit-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="authoredit-documentation">Author/Edit Documentation</h2>
+<p>To create new documentation, or edit existing docs, simply open the content in the <code>docs</code> directory and create new <code>.md</code> or <code>.qmd</code> files as needed. For specific details about authoring these files, it is recommended to start with Quarto’s <a href="https://quarto.org/docs/authoring/markdown-basics.html">Markdown Basics</a> page.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>build-docs</code> folder in the <code>docs</code> directory is the automatically rendered site that is seen on GitHub Pages. Do not edit files in this directory.</p>
+</div>
+</div>
+<p>The current template setup uses GitHub Actions to build a website automatically from the <code>docs</code> folder. The current settings override some of the usual defaults to enable using Quarto’s build process instead of the standard (to GitHub) Jekyll build process. This greatly simplifies many things about rendering documentation to HTML and websites, as well as making it easier to render into books or Word documents later; this process is now fully automated.</p>
+<ol type="1">
+<li>The first step is, of course, to make whatever edits are desired in the <code>docs</code> folder.</li>
+<li>Now just commit and push your changes to GitHub, and the automated website build process will take care of the rest</li>
+</ol>
 </section>
-<section id="venv" class="level2">
-<h2 class="anchored" data-anchor-id="venv">Venv</h2>
-<p><a href="https://docs.python.org/3/library/venv.html">venv</a> is a core module in Python, and the us the <em>official</em> environment manager of Python. It enables creating “virtual environments” that each have their own set of Python packages installed in their site directories. A venv is created on top of an existing Python installation (known as the ‘base’ Python). A venv may be created from a <code>requirements.txt</code> file that specifies the required packages and their versions.</p>
-</section>
-<section id="anaconda" class="level2">
-<h2 class="anchored" data-anchor-id="anaconda">Anaconda</h2>
-<p>Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer (2015 on, say) Python users first get onboarded, so it is quite popular.</p>
-<section id="miniconda" class="level3">
-<h3 class="anchored" data-anchor-id="miniconda">Miniconda</h3>
-<p>A lightweight variant worth knowing about…</p>
+<section id="quarto" class="level2">
+<h2 class="anchored" data-anchor-id="quarto">Quarto</h2>
+<p>The current setup no longer requires installation of Quarto on your local machine. However, Quarto is still a useful tool on its own. To install, visit the <a href="https://quarto.org/docs/get-started/">Quarto install page</a> and follow instructions for your operating system. A sub-page will be created soon for more information.</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
