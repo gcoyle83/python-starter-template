@@ -13,15 +13,11 @@ def add(x):
 def subtract(x):
     return x - 1
 
+
 def poorly_written():
     """
     This is a poorly structured function
     """
-    x = [
-        1,2,
-        3
-    ]
-    y = [1,2,
-         3
-         ]
-    return x+y
+    x = [1, 2, 3]
+    y = [1, 2, 3]
+    return x + y
