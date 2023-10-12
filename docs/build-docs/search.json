@@ -228,6 +228,6 @@
     "href": "index.html#documentation",
     "title": "Python Starter Template",
     "section": "Documentation",
-    "text": "Documentation\nAnother critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is written/edited in the write_docs directory and is rendered into a website in the docs folder during the (semi-automatic) build process.\nFor documentation details, including how to edit documentation and generate a website, see the Documentation tools page."
+    "text": "Documentation\nAnother critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is written/edited in the docs directory (by humans) and is then automatically rendered into a website stored in the build-docs folder during the fully automated build process. More details on this procedure are included in the documentation tools page."
   }
 ]
