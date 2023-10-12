@@ -1,5 +1,5 @@
 [![](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
-[![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml)
+[![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://gcoyle83.github.io/python-starter-template/)
 
 :::{.callout-important}
 Docs builds are now fully automated. Simply create/edit pages in the `write_docs` directory and commit/push changes as normal. The build/deploy workflow will run automatically. For more info, see [Documentation](tools/documentation.qmd#authoredit-documentation)
@@ -75,7 +75,7 @@ It is important but tedious to follow formatting standards. Automated tools have
     pylint --errors-only src
     ```
 
-    Note that know rating is returned. Try introducing an error into a module and run again to see what happens.
+    Note the rating is no longer returned. Try introducing an error into a module and run again to see what happens.
 
 1. Now use `black` to autoformat your Python code to PEP8 compliance. Black is "an opinionated strict subset of PEP8". While `Pylint` can be used to generate a set of recommendations or flag errors, `Black` can be used to automatically enforce formatting conventions:
 

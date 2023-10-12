@@ -1,5 +1,5 @@
 [![](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
-[![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml)
+[![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://gcoyle83.github.io/python-starter-template/)
 
 # Python Starter Template
 This repo provides a basic starter template for best practices developing and testing *unpackaged* Python code. Emphasis on that last point - this is **not** a Python packaging template. This template is for use with generic Python projects that want to take advantage of automated tools to improve the development process, including: 
