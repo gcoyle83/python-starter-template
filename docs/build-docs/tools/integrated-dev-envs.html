@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python User’s Guide - Development Tools</title>
+<title>Python User’s Guide - Integrated Development Environments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-tools">    
         <li>
-    <a class="dropdown-item" href="../tools/overview.qmd" rel="" target="">
+    <a class="dropdown-item" href="../tools/overview.html" rel="" target="">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
@@ -111,11 +111,11 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Version Control</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tools/documentation.qmd" rel="" target="">
+    <a class="dropdown-item" href="../tools/documentation.html" rel="" target="">
  <span class="dropdown-text">Documentation</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../tools/containers.qmd" rel="" target="">
+    <a class="dropdown-item" href="../tools/containers.html" rel="" target="">
  <span class="dropdown-text">Containerization</span></a>
   </li>  
     </ul>
@@ -152,11 +152,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#integrated-development-environments" id="toc-integrated-development-environments" class="nav-link active" data-scroll-target="#integrated-development-environments">Integrated Development Environments</a></li>
-  <li><a href="#package-and-environment-managemers" id="toc-package-and-environment-managemers" class="nav-link" data-scroll-target="#package-and-environment-managemers">Package and Environment Managemers</a></li>
-  <li><a href="#version-control-systems" id="toc-version-control-systems" class="nav-link" data-scroll-target="#version-control-systems">Version Control Systems</a></li>
-  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
-  <li><a href="#containerization" id="toc-containerization" class="nav-link" data-scroll-target="#containerization">Containerization</a></li>
+  <li><a href="#vs-code" id="toc-vs-code" class="nav-link active" data-scroll-target="#vs-code">VS Code</a></li>
+  <li><a href="#others" id="toc-others" class="nav-link" data-scroll-target="#others">Others</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/gcoyle83/python-starter-template/issues" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -165,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Development Tools</h1>
+<h1 class="title">Integrated Development Environments</h1>
 </div>
 
 
@@ -180,26 +177,15 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>There are many useful Python development tools, and we do not pretend to know them all. This section of the site offers guidance on which tools to use to get started and is based purely on our present abilities to provide guidance rather than any claims of one tool being better than any other. The tools identified and summarized here are selected based on current usage and willingness of a team member to share their knowledge here. If you like a tool that is not included in this section, please contribute content to improve the coverage here.</p>
-<section id="integrated-development-environments" class="level2">
-<h2 class="anchored" data-anchor-id="integrated-development-environments"><a href="../pytools/integrated-dev-envs.html">Integrated Development Environments</a></h2>
-<p>Integrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The <em>recommended</em> IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder. <a href="../pytools/integrated-dev-envs.html">Read on…</a></p>
+<p>Integrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The <em>recommended</em> IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder.</p>
+<section id="vs-code" class="level3">
+<h3 class="anchored" data-anchor-id="vs-code">VS Code</h3>
+<p>Visual Studio Code (VS Code) is a free, multi-platform, multi-language IDE developed by Microsoft and is popularly used by software engineers for developing solutions in numerous languages. The VS Code extensions ecosystem is large and active - there are extensions for linting, formatting, source control, containerization, cloud computing services and much (much) more.</p>
+<p>Ready to give it a try? See our <a href="../tutorials/vscode_primer.html">primer on installing and setting up VS Code</a> to effectively collaborate on Python development projects.</p>
 </section>
-<section id="package-and-environment-managemers" class="level2">
-<h2 class="anchored" data-anchor-id="package-and-environment-managemers"><a href="../pytools/pkg-env-manager.html">Package and Environment Managemers</a></h2>
-<p>Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (<em>dependency hell</em>). <a href="../pytools/pkg-env-manager.html">Read on…</a></p>
-</section>
-<section id="version-control-systems" class="level2">
-<h2 class="anchored" data-anchor-id="version-control-systems"><a href="../pytools/version-control.html">Version Control Systems</a></h2>
-<p>A Version Control System (VCS) is a database system for tracking changes to a filesystem over time. There are many types of VCSs that have been developed over the years. There is an “interesting” <a href="">history of version control</a> available from Git for those interested in exploring the weeds of yesteryear. For others, it’s probably sufficient to point to the currently available systems and provide a brief summary of each. <a href="../pytools/version-control.html">Read on…</a></p>
-</section>
-<section id="documentation" class="level2">
-<h2 class="anchored" data-anchor-id="documentation"><a href="../pytools/documentation.html">Documentation</a></h2>
-<p>Documentation is a vital part of any Python project. See the <a href="../pytools/documentation.html">documentation tools page</a> for a review of using some recommended tools for documenting your projects.</p>
-</section>
-<section id="containerization" class="level2">
-<h2 class="anchored" data-anchor-id="containerization"><a href="../pytools/containers.html">Containerization</a></h2>
-<p>Package and environment management is necessary but insufficient to ensure reproducible projects. Environments run on operating systems, which run on real or virtual machines. Containerization is a technology developed to support reproducibility and virtualization (at scale) of operating systems. <a href="../pytools/containers.html">Read on…</a></p>
+<section id="others" class="level3">
+<h3 class="anchored" data-anchor-id="others">Others</h3>
+<p>Feel free to add short descriptions of your favorite IDE and link to a primer page here.</p>
 
 
 </section>
