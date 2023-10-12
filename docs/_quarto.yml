@@ -9,8 +9,24 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - href: tools.qmd
-        text: Tools
+      - text: "Tools"
+        menu:
+          - href: tools/overview.qmd
+            text: Overview
+          - href: tools/ide.qmd
+            text: Integrated Development Environments
+          - href: tools/environment.qmd
+            text: Package and Environment Managers
+          - href: tools/version_control.qmd
+            text: Version Control
+          - href: tools/documentation.qmd
+            text: Documentation
+          - href: tools/containers.qmd
+            text: Containerization
+      - text: Tutorials
+        menu:
+          - href: tutorials/vscode_primer.qmd
+            text: VS Code Primer
 
 format:
   html:
