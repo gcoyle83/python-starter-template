@@ -2,7 +2,7 @@
 [![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://gcoyle83.github.io/python-starter-template/)
 
 :::{.callout-important}
-Docs builds are now fully automated. The separate `write_docs` directory is no longer needed. Simply create/edit docs files in the `docs` folder (leave content in `docs/build-docs` alone, this folder contains the rendered site) and commit/push changes as normal. The build/deploy workflow will run automatically. For more info, see [Documentation](tools/documentation.qmd#authoredit-documentation)
+Docs builds are now fully automated. The separate `write_docs` directory is no longer needed. Simply create/edit docs files in the `docs` folder (leave content in `docs/build-docs` alone, this folder contains the rendered site) and commit/push changes as normal. The build/deploy workflow will run automatically. For more info, see [Documentation](pytools/documentation.qmd#authoredit-documentation)
 :::
 
 # Python Starter Template
@@ -117,7 +117,7 @@ Testing on the development system is a fundamental first step, but Python projec
 ## Documentation
 Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `write_docs` directory and is rendered into a website in the `docs` folder during the (semi-automatic) build process.
 
-For documentation details, including how to edit documentation and generate a website, see the [Documentation tools](https://gcoyle83.github.io/python-starter-template/tools/documentation.html) page.
+For documentation details, including how to edit documentation and generate a website, see the [Documentation tools](pytools/documentation.html) page.
 
 # Older boilerplate
 This is a collaborative site for continual development of organizational guidance and reusable templates for Python projects. Similar sites for R, Julia and other useful languages will probably be helpful, but are beyond the present scope of this site. The primary objectives for development of this site were outlined at the September 2023 "hackathon" in Andover, MA, including:
@@ -127,8 +127,6 @@ This is a collaborative site for continual development of organizational guidanc
 -  Links to/recommendations for "learning paths" to help all interested colleagues develop software/coding skills
 
 To learn more about the collaborators on the effort, see the [About page](about.qmd).
-
-Visit our [source repository](https://github.com/gcoyle83/quarto-example-site).
 
 >Website developed using Quarto.
 >To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
