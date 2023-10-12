@@ -2,10 +2,6 @@
 [![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://gcoyle83.github.io/python-starter-template/)
 [![Black](https://github.com/gcoyle83/python-starter-template/actions/workflows/format.yml/badge.svg)](https://github.com/gcoyle83/python-starter-template/actions/workflows/format.yml)
 
-:::{.callout-important}
-Docs builds are now fully automated. The separate `write_docs` directory is no longer needed. Simply create/edit docs files in the `docs` folder (leave content in `docs/build-docs` alone, this folder contains the rendered site) and commit/push changes as normal. The build/deploy workflow will run automatically. For more info, see [Documentation](tools/documentation.qmd#authoredit-documentation)
-:::
-
 # Python Starter Template
 This repo provides a basic starter template for best practices developing and testing *unpackaged* Python code. Emphasis on that last point - this is **not** a Python packaging template. This template is for use with generic Python projects that want to take advantage of automated tools to improve the development process, including: 
 
