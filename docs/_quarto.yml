@@ -13,11 +13,11 @@ website:
         menu:
           - href: tools/overview.qmd
             text: Overview
-          - href: tools/ide.qmd
+          - href: tools/integrated-dev-envs.qmd
             text: Integrated Development Environments
-          - href: tools/environment.qmd
+          - href: tools/pkg-env-manager.qmd
             text: Package and Environment Managers
-          - href: tools/version_control.qmd
+          - href: tools/version-control.qmd
             text: Version Control
           - href: tools/documentation.qmd
             text: Documentation
@@ -25,15 +25,8 @@ website:
             text: Containerization
       - text: Tutorials
         menu:
-          - href: tutorials/vscode_primer.qmd
+          - href: tutorials/vscode-primer.qmd
             text: VS Code Primer
-    # tools:
-    #   icon: github
-    #   menu:
-    #     - text: Source Repo
-    #       url: https://github.com/gcoyle83/python-starter-template
-    #     - text: Report a Bug
-    #       url: https://github.com/gcoyle83/python-starter-template/issues
   back-to-top-navigation: true
   reader-mode: true
   repo-url: https://github.com/gcoyle83/python-starter-template

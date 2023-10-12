@@ -117,7 +117,7 @@ Testing on the development system is a fundamental first step, but Python projec
 ## Documentation
 Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `write_docs` directory and is rendered into a website in the `docs` folder during the (semi-automatic) build process.
 
-For documentation details, including how to edit documentation and generate a website, see the [Documentation tools](tools/documentation.html) page.
+For documentation details, including how to edit documentation and generate a website, see the [Documentation tools](tools/documentation.qmd) page.
 
 # Older boilerplate
 This is a collaborative site for continual development of organizational guidance and reusable templates for Python projects. Similar sites for R, Julia and other useful languages will probably be helpful, but are beyond the present scope of this site. The primary objectives for development of this site were outlined at the September 2023 "hackathon" in Andover, MA, including:
