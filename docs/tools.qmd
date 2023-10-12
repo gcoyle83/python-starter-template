@@ -1,5 +1,5 @@
 ---
-title: "Tools"
+title: "Development Tools"
 ---
 
 There are many useful Python development tools, and we do not pretend to know them all. This section of the site offers guidance on which tools to use to get started and is based purely on our present abilities to provide guidance rather than any claims of one tool being better than any other. The tools identified and summarized here are selected based on current usage and willingness of a team member to share their knowledge here. If you like a tool that is not included in this section, please contribute content to improve the coverage here.
