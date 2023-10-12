@@ -26,6 +26,7 @@ jobs:
       - name: Commit and Push
         run: |
           git config --global user.name 'Quarto'
+          git add .
           git commit -am "Automated rendering by Quarto"
           git push
       - name: Setup Pages
