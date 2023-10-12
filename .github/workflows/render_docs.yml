@@ -4,7 +4,7 @@ on:
     workflow_dispatch:
     push:
       branches: main
-      paths: write_docs/**
+      paths: docs/**
 
 permissions:
   contents: write
@@ -22,7 +22,7 @@ jobs:
       - name: Render
         uses: quarto-dev/quarto-actions/render@v2
         with:
-          path: write_docs
+          path: docs
       - name: Commit and Push
         run: |
           git config --global user.name 'Quarto'
@@ -34,7 +34,7 @@ jobs:
       - name: Generate artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: docs
+          path: docs/build-docs
 
   # Deployment job
   deploy:

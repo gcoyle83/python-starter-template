@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: ../docs
+  output-dir: build-docs
 
 website:
   title: "Python Starter Template"
