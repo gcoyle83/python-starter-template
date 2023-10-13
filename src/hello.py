@@ -18,13 +18,20 @@ def bad_formatting():
     """
     This is a poorly formatted function
     """
-    x = [1, 2, 3, 4]
-    y = [1, 2, 3, 4]
+    x = [
+        1, 2, 3, 4
+    ]
+    y = [
+        1, 
+        2, 
+        3, 
+        4
+    ]
     return x + y
 
 
 def good_formatting():
     """
-    This one's well formatted so shouldn't trigger an autocommit
+    This one's PEP8 formatted
     """
     return 2 + 2
