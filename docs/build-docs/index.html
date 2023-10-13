@@ -177,11 +177,11 @@ ul.task-list li input[type="checkbox"] {
 <p>This repo provides a basic starter template for best practices developing and testing <em>unpackaged</em> Python code. Emphasis on that last point - this is <strong>not</strong> a Python packaging template. This template is for use with generic Python projects that want to take advantage of automated tools to improve the development process, including:</p>
 <ul>
 <li>Virtual environment management with <code>venv</code></li>
-<li>Code formatting and linting with <code>Pylint</code> and <code>Black</code></li>
+<li>Automated code review with <code>Pylint</code> and <code>Black</code></li>
 <li>Functional tests with <code>Pytest</code></li>
 <li>Remote tests to support reproducibility (via GitHub Actions)</li>
+<li>Automated project documentation rendering with Quarto</li>
 </ul>
-<p>If you are looking for a template repo for Python projects that will be distributed as packaged libraries, <a href="https://packaging.python.org/en/latest/overview/">maybe we should create one</a>…</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -294,8 +294,7 @@ Warning
 </section>
 <section id="documentation" class="level2">
 <h2 class="anchored" data-anchor-id="documentation">Documentation</h2>
-<p>Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is <em>written/edited</em> in the <code>write_docs</code> directory and is rendered into a website in the <code>docs</code> folder during the (semi-automatic) build process.</p>
-<p>For documentation details, including how to edit documentation and generate a website, see the <a href="./tools/documentation.html">Documentation tools</a> page.</p>
+<p>Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is <em>written/edited</em> in the <code>docs</code> directory (by humans) and is then automatically rendered into a website stored in the <code>build-docs</code> folder during the fully automated build process. More details on this procedure are included in the <a href="./tools/documentation.html">documentation tools</a> page.</p>
 </section>
 </section>
 <section id="older-boilerplate" class="level1">
