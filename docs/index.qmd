@@ -24,7 +24,7 @@ This repo is a *template*. DO NOT clone it and then attempt to modify it (this w
 ## Create a new repo from this template
 1. To start a new GitHub repo from this template, at the top of this repo's root page select the "Use this template" option.
 
-[![](assets\img\index_useTemplate.png)
+![](assets\img\index_useTemplate.PNG)
 
 1. Specify a name for your new project, and then create the repo. On the new repo's page, copy the cloning address from the "Code" dropdown menu (indicated below as `<repo-url>`. Use HTTPS or SSH depending on your setup for Git. If you have never used Git and need further instructions, see the [Configuring Git]() tutorial before continuing.
 
