@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#python-starter-template" id="toc-python-starter-template" class="nav-link active" data-scroll-target="#python-starter-template">Python Starter Template</a></li>
-  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage">Usage</a>
+  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic Usage</a>
   <ul class="collapse">
   <li><a href="#create-a-new-repo-from-this-template" id="toc-create-a-new-repo-from-this-template" class="nav-link" data-scroll-target="#create-a-new-repo-from-this-template">Create a new repo from this template</a></li>
   <li><a href="#create-virtual-environment" id="toc-create-virtual-environment" class="nav-link" data-scroll-target="#create-virtual-environment">Create virtual environment</a></li>
@@ -199,8 +199,8 @@ Note
 </div>
 </div>
 </section>
-<section id="usage" class="level1">
-<h1>Usage</h1>
+<section id="basic-usage" class="level1">
+<h1>Basic Usage</h1>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -216,7 +216,14 @@ Warning
 </div>
 <section id="create-a-new-repo-from-this-template" class="level2">
 <h2 class="anchored" data-anchor-id="create-a-new-repo-from-this-template">Create a new repo from this template</h2>
-<p>Start a new GitHub repo, and select this repo from the “Repository Template” option. Be sure to select the subsequent “Include all branches” option to benefit from the project documentation, website and GitHub Pages branches. The remainder of the usage instructions assume that actions are taken from this new repository.</p>
+<ol type="1">
+<li>To start a new GitHub repo from this template, at the top of this repo’s root page select the “Use this template” option.</li>
+</ol>
+<p>[<img src="assets\img\index_useTemplate.png" class="img-fluid"></p>
+<ol type="1">
+<li><p>Specify a name for your new project, and then create the repo. On the new repo’s page, copy the cloning address from the “Code” dropdown menu (indicated below as <code>&lt;repo-url&gt;</code>. Use HTTPS or SSH depending on your setup for Git. If you have never used Git and need further instructions, see the <a href="">Configuring Git</a> tutorial before continuing.</p></li>
+<li><p>On your machine, open a Bash (or other) terminal in a directory of your preference and execute the command <code>git clone &lt;repo-url&gt;</code> The remainder of these basic usage instructions assume that all suggested actions are taken from this new repository.</p></li>
+</ol>
 </section>
 <section id="create-virtual-environment" class="level2">
 <h2 class="anchored" data-anchor-id="create-virtual-environment">Create virtual environment</h2>
