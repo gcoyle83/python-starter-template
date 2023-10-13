@@ -25,7 +25,8 @@ jobs:
           path: docs
       - name: Commit and Push
         run: |
-          git config --global user.name 'Quarto'
+          git config --global user.name "Greg Coyle"
+          git config --global user.email "gcoyle@brwncald.com"
           git add docs/build-docs
           git commit -am "Automated rendering by Quarto"
           git push
