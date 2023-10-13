@@ -18,3 +18,8 @@ The current template setup uses GitHub Actions to build a website automatically 
 
 ## Quarto
 The current setup no longer requires installation of Quarto on your local machine. However, Quarto is still a useful tool on its own. To install, visit the [Quarto install page](https://quarto.org/docs/get-started/) and follow instructions for your operating system. A sub-page will be created soon for more information.
+
+Example testing code include:
+
+```{.python include="hello.py"}
+```
