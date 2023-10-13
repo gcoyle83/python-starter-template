@@ -114,7 +114,16 @@ After static review, the code can be dynamically tested. The [`Pytest`](https://
 1. Note the results (percent complete and pass/fail status) printed to the terminal after each functional unit test.
 
 ## Remote testing
-Testing on the development system is a fundamental first step, but Python projects should also be regularly tested on remote systems to ensure that they can be reproduced "from scratch" without issue. The GitHub Workflow file `checks.yml` enables an automated workflow to run the above steps (build Python environment, format and lint code, run tests) on a remote GitHub "runner". 
+Testing on the development system is a fundamental first step, but Python projects should also be regularly tested on remote systems to ensure that they can be reproduced "from scratch" without issue. The GitHub Workflow file `checks.yml` enables an automated workflow to run the above steps (build Python environment, format and lint code, run tests) on a remote GitHub "runner". To learn more about authoring and editing workflows in GitHub, visit the [GitHub Workflows]() tutorial.
+
+## Trunk-based Development, Branch Protections and Continuous Integration
+*Trunk-based development* is a development practice meant to support change management. As a project's codebase changes over time, it is important to control the scope of any single set of changes, so that they can be thoroughly tested before merging and so that they can be *rolled back* in the event of unforeseen consequences. The concept is relatively simple: 
+
+-  The `main` branch of a repo represents "production-ready" code, i.e., the best currently available implementation of the project's goals
+-  Any new feature (a new function, a better version of a function, etc) is implemented in a `feature` branch, which is branched off the current state of the `main` branch
+-  When a new feature is developed, it is tested and then merged via Pull Request  
+
+*Branch protections* are a set of configuration options that can be specified in GitHub for each branch of the repository. This feature enables best practices like preventing changes to the repo's main branch except by an approved Pull Request from another branch, which helps prevent untested changes from creeping into your production code. When working on projects with more than a few trusted collaborators, it becomes very important to implement branch protections and continuous integration practices. 
 
 ## Documentation
 Another critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is *written/edited* in the `docs` directory (by humans) and is then automatically rendered into a website stored in the `build-docs` folder during the fully automated build process. More details on this procedure are included in the [documentation tools](tools/documentation.qmd) page.
