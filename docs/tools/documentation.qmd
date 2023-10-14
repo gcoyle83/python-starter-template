@@ -23,5 +23,5 @@ The current setup no longer requires installation of Quarto on your local machin
 
 Example testing code include:
 
-```{.python include="../src/version.py" start-line=4 end-line=10}
+```{.python include="../../src/version.py" start-line=4 end-line=10}
 ```
