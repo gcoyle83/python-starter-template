@@ -1,5 +1,7 @@
 ---
 title: "Documentation"
+filters:
+   - include-code-files
 ---
 
 Documentation for this template is developed using [Markdown]() and [Quarto]() (an extension of Markdown). The template is set up to make the documentation build process as simple as possible.  
@@ -21,5 +23,5 @@ The current setup no longer requires installation of Quarto on your local machin
 
 Example testing code include:
 
-```{.python include="hello.py"}
+```{.python include="../src/version.py" start-line=4 end-line=10}
 ```

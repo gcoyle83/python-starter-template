@@ -1,6 +1,5 @@
 import sys
 
-
 def python_version():
     version_string = sys.version.split(" ")[0].split(".")
     major = version_string[0]

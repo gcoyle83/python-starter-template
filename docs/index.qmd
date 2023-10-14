@@ -1,3 +1,9 @@
+---
+title: ""
+filters:
+   - include-code-files
+---
+
 [![](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml/badge.svg?branch=main)](https://github.com/gcoyle83/python-starter-template/actions/workflows/checks.yml)
 [![Docs](https://github.com/gcoyle83/python-starter-template/actions/workflows/render_docs.yml/badge.svg)](https://gcoyle83.github.io/python-starter-template/)
 [![Black](https://github.com/gcoyle83/python-starter-template/actions/workflows/format.yml/badge.svg)](https://github.com/gcoyle83/python-starter-template/actions/workflows/format.yml)
