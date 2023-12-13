@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Python User’s Guide - Package and Environment Managers</title>
+<title>Python User’s Guide - Getting Started with VS Code</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -155,10 +155,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#python-package-index" id="toc-python-package-index" class="nav-link active" data-scroll-target="#python-package-index">Python Package Index</a></li>
-  <li><a href="#pip" id="toc-pip" class="nav-link" data-scroll-target="#pip"><code>pip</code></a></li>
-  <li><a href="#venv" id="toc-venv" class="nav-link" data-scroll-target="#venv">Venv</a></li>
-  <li><a href="#anacondaminiconda" id="toc-anacondaminiconda" class="nav-link" data-scroll-target="#anacondaminiconda">Anaconda/Miniconda</a></li>
+  <li><a href="#install-vs-code" id="toc-install-vs-code" class="nav-link active" data-scroll-target="#install-vs-code">Install VS Code</a></li>
+  <li><a href="#install-extensions" id="toc-install-extensions" class="nav-link" data-scroll-target="#install-extensions">Install Extensions</a></li>
+  <li><a href="#basic-usage" id="toc-basic-usage" class="nav-link" data-scroll-target="#basic-usage">Basic Usage</a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/gcoyle83/python-starter-template/issues" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -167,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Package and Environment Managers</h1>
+<h1 class="title">Getting Started with VS Code</h1>
 </div>
 
 
@@ -182,70 +181,59 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (<em>dependency hell</em>).</p>
-<section id="python-package-index" class="level2">
-<h2 class="anchored" data-anchor-id="python-package-index">Python Package Index</h2>
-<p>The <a href="https://pypi.org/">Python Package Index (PyPI)</a> is a public repository of Python software developed by over 750 thousand users worldwide. It includes more than half-a-million projects. Generally, whichever PEM you use, it will ultimately pull the required Python software from PyPI in one form or another (wheels, source distributions or binaries).</p>
-</section>
-<section id="pip" class="level2">
-<h2 class="anchored" data-anchor-id="pip"><code>pip</code></h2>
-<p>The most popular tool for installing Python packages is <a href="https://packaging.python.org/en/latest/key_projects/#pip">pip</a>. It provides features for finding, downloading and installing packages from PyPI and other Python package indexes. It provides a simple command-line interface (CLI) that can be leveraged in many other tools, from <a href="">shell scripts</a> to <a href="">conda environment specifications</a>. That said, <code>pip</code> does have some major limitations, including:</p>
+<p>This page is intended as primer/SOP for installing and configuring VS Code for a generic Python project.</p>
+<p>The primary steps covered here are:</p>
 <ul>
-<li><code>pip</code> provides <a href="">wheels</a> or <a href="">source distributions</a>, which can have pre-conditions to successful installation, including specific compilers, pre-installed libraries, et cetera</li>
-<li><code>pip</code> installs packages serially, and so may result in different environments depending on the order in which packages are installed (i.e., it has no ‘environment solver’ as described in the <a href="#anacondaminiconda">Anaconda section, below</a>)</li>
-<li><code>pip</code> cannot install Python interpreters (Python is a precondition for running <code>pip</code>)</li>
-<li><code>pip</code> can only install Python packages - no other software languages are supported</li>
+<li>Install VS Code</li>
+<li>Install Python extension for VS Code</li>
+<li>Basic usage instructions for a template Python project</li>
+</ul>
+<section id="install-vs-code" class="level2">
+<h2 class="anchored" data-anchor-id="install-vs-code">Install VS Code</h2>
+<p>VS Code can be installed simply from the product’s main <a href="https://code.visualstudio.com/download">download page</a>. Simply select the operating system for your machine and run the installer: - Accept the license agreement; - Accept default options for install destination; - Accept default Start Menu location; - Under “Select Additional Tasks”, keep the default selections <em>and also</em> select the two options to add “Open with Code” actions to Windows Explorer menus (this will make life easier), and (optionally) create a desktop icon;</p>
+</section>
+<section id="install-extensions" class="level2">
+<h2 class="anchored" data-anchor-id="install-extensions">Install Extensions</h2>
+<p>Once VS Code is installed on your machine, open it and navigate on the left menu bar to the Extensions blade (it looks like a Tetris game), or use the keyboard shortcut (<code>Ctrl+Shift+X</code>) instead. Use the search bar to find the desired extensions:</p>
+<ul>
+<li>Python - This extension (make sure to select the extension from Microsoft, not others) includes Intellisense (autocompletion, syntax checking), tools for linting (Pylint, Flake8), debugging, code formatting (black, autopep), refactoring, integrated unit tests (unittest, pytest) and more. Join 100M other users taking advantage of these features.</li>
 </ul>
 </section>
-<section id="venv" class="level2">
-<h2 class="anchored" data-anchor-id="venv">Venv</h2>
-<p><a href="https://docs.python.org/3/library/venv.html">venv</a> is a core module in Python, and thus the <em>official</em> environment manager of Python. It enables creating “virtual environments” - essentially a distinct set of directories containing all of the necessary Python software to run a given project - that each have their own set of Python packages installed in their site directories. A <code>venv</code> is created on top of an existing Python installation (known as the ‘base’ Python), the version of which can be specified at time of creation. A <code>venv</code> may be created from a <code>requirements.txt</code> file that specifies the required packages and their versions. An example of using <code>venv</code> to manage a project’s requirements is included as a part of the BC internal <code>python-starter-template</code>, documented <a href="../index.html#create-virtual-environment">here</a>.</p>
-<p>Despite <code>venv</code>’s capability for successful environment management, it still depends upon <code>pip</code> for dependency management, and so remains vulnerable to the same potential failure points. Additional packages have been developed to resolve these issues in a Python-centric manner (i.e., with no concern for non-Python software packages that may be required by a project). These packages are very useful for “pure Python” projects with no additional software dependencies (C++/R/Java, etc):</p>
+<section id="basic-usage" class="level2">
+<h2 class="anchored" data-anchor-id="basic-usage">Basic Usage</h2>
+<p>In this section we’ll walk through some basic usage steps, setting up some additional features along the way.</p>
 <ul>
-<li><a href="https://virtualenv.pypa.io/en/latest/">virtualenv</a></li>
-<li><a href="https://pipenv.readthedocs.io/en/latest/">pipenv</a></li>
-<li><a href="https://poetry.eustace.io/">poetry</a></li>
-<li><a href="https://github.com/ofek/hatch">hatch</a></li>
+<li>Once VS Code is installed, use the Accounts icon at the bottom left of the window to log in to your GitHub account through VS Code, following any multi-factor authentication steps indicated.</li>
+<li>Clone the Python project starter template repo from GitHub:
+<ul>
+<li>Use the <code>Ctrl+Shift+P</code> shortcut to activate the command pallette (use <code>Esc</code> to exit it as needed)</li>
+<li>Search the pallette for ‘Terminal’ and select the <code>Terminal: Create New Terminal</code> option that appears</li>
+<li>Note that the terminal “opens” as a vertical split in the VS Code window - it is always accessible (or minimizable) by sliding this vertical separator up or down as desired</li>
+<li><code>cd</code> and/or <code>mkdir</code> to a desired directory</li>
+<li>Enter the command <code>git clone git@github.com:gcoyle83/quarto-example-site.git</code>, and enter authentication information as required (add SSH keygen instructions)</li>
+</ul></li>
+<li>When you open a VS Code window directly from a folder, the root of the project Explorer is at that folder; it is often helpful when working on multiple projects to open separate VS Code windows for each project, using the “Open with VS Code” action accessible from the right-click context menu in Windows Explorer.
+<ul>
+<li>Navigate to the repo location in Windows Explorer</li>
+<li>Right click on the repo directory</li>
+<li>Select “Open with Code”, and note the root directory</li>
+<li>In VS Code, select the source control blade (or use the strange <code>Ctrl+Shift+G</code> followed with <code>g</code> shortcut)</li>
+<li>Expand the Branches section of the blade and note that one branch (<code>main</code>) is shown</li>
+<li>Expand the Remotes section of the blade and then expand the <code>origin</code> to show all available branches</li>
+<li>Hover over the website branch and note the several icons that appear on the right side</li>
+<li>Hover over the first of these icons and note that it says “Switch to branch” - this is the same as the <code>git switch</code> command, but it also fetches it if it’s not currently in the local</li>
+<li>Select the switch icon to switch to the website branch; enter a local branch name or use the remote name to track locally (just press enter)</li>
+<li>Observe that the branch is added to the Branches blade, and has a check-mark next to it</li>
+<li>Hover over the check-mark; observe that the popup information is the same as would be returned by <code>git status</code> on the command line</li>
+<li>Return to the Explorer blade (<code>Ctrl+Shift+E</code>), and note that the files shown now reflect the Quarto website content</li>
+<li>Open the <code>about.qmd</code> file, and add your name to the list in the Development Group Members section of the page, then save your changes (<code>Ctrl+S</code>)</li>
+<li>Return to the source control blade (<code>Ctrl+Shift+G</code> + <code>g</code>)</li>
+<li>Expand the source control section, and note that there is a change pending</li>
+<li>Hover over the “Changes” list, and then over each of the three resulting icons - they are stash, discard and stage command buttons - note also that the individual files are listed with similar buttons to revert or stage changes file-by-file; use the “Stage All Changes” button to stage your changes</li>
+<li>Type a useful commit message and press the green Commit button</li>
+<li>Click the green Sync Changes button to sync with the remote GitHub repo</li>
+</ul></li>
 </ul>
-<p>For present purposes, the reader is referred to the above packages’ documentation for further instruction on usage.</p>
-</section>
-<section id="anacondaminiconda" class="level2">
-<h2 class="anchored" data-anchor-id="anacondaminiconda">Anaconda/Miniconda</h2>
-<p><a href="https://www.anaconda.com/about-us">Anaconda</a> is a company focused on providing tools, platforms and services supporting the development of open-source software, specifically scientific software often created by non-profit organizations. The <a href="https://docs.anaconda.com/#distribution-packages">Anaconda Distribution</a> is a particular, curated set of open-source software - consisting primarily of Python and R packages - that provides a foundational starting point for training in advanced scientific computing, analytics and data science. The Anaconda Distribution is often how newer Python users first get onboarded, as it is quite simple and so quite popular in academic circles.</p>
-<p>Anaconda also has its own <a href="https://anaconda.org/anaconda/repo">Anaconda package index</a> which draws from PyPI, the Comprehensive R Archive Network (CRAN), and other sources to provide binaries of popular software used in the Anaconda community. The Anaconda package index has standardized methods for cataloguing registered software packages in various supported languages and tracking new releases to these packages in their native package indexes, providing automated updates with new binaries for new releases.</p>
-<p>The core of Anaconda is a particular library called <code>conda</code> - this is the part of the distribution that provides the core functionality to search the Anaconda package index for software packages, download and install them, either in the “base” environment or in Anaconda’s version of a virtual environment called a <code>conda</code> environment. See the <a href="../tutorials/conda-env.html">Setting up a conda environment</a> tutorial for an example of using a conda specification file to create a reproducible project environment. Anaconda has provided a very useful discussion of the differences between <code>pip</code> and <code>conda</code> <a href="https://www.anaconda.com/blog/understanding-conda-and-pip">here</a>, specifically because there is often confusion around when to use one or the other, and how the two tools are distinguished.</p>
-<p>Perhaps most importantly, the <code>conda</code> library includes a “satisfiability solver”/“environment solver” that automatically identifies potential dependency conflicts among a set of requested packages and finds the most up-to-date set of packages that meet all requirements. For instance, suppose you want to install a package that does one thing (call it package A), which depends on a specific version of another package B (say version B.4 through B.12). You also need another package C that in turn requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With projects requiring many packages, this can become quite a bottleneck in the development process. Recent improvements to the core environment solver have been released in a separate project, called the <a href="https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community"><code>Libmamba</code> project</a>, that can be used to greatly accelerate the environment solver and speed up the process of installing the requirements for new projects.</p>
-<p>Anaconda also comes with many pre-installed packages with dependencies already installed. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at the cost of a large (3 GB) memory footprint, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Installing Anaconda on BC machines
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>See <a href="../tools/pem-anaconda.html">this page</a> for a detailed presentation of steps to properly install Anaconda on BC-owned machines.</p>
-</div>
-</div>
-<p><a href="https://docs.conda.io/projects/miniconda/en/latest/">Miniconda</a> is a light-weight version of Anaconda that essentially only includes the <code>conda</code> package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like <code>pip</code>). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).</p>
-<p>For further considerations regarding selection of Anaconda or Miniconda for your projects, see the <a href="https://docs.conda.io/projects/conda/en/stable/user-guide/install/download.html#anaconda-or-miniconda">Anaconda documentation on this topic</a>.</p>
-<p>See the following for detailed instructions to <a href="../tools/pem-miniconda.html">properly install Miniconda on BC-owned machines</a>.</p>
-<p>Regardless of your choice to use the Anaconda or Miniconda installation option, if you are using either you will be using the <code>conda</code> package to create, manage and access your environments. It is <em>highly recommended</em> to do so using the YAML conda environment specification, as presented in the <a href="../tutorials/conda-env.html">Setting up a conda environment</a> tutorial. This is because the YAML specification provides a human-readable, easily shareable, and executable set of instructions in a single file to easily reproduce the project environment. Using these specifications to create many distinct project environments has other advantages, too. If instead the <code>base</code> environment is modified when working on a new project, it is likely - if not certain - that your prior projects will become inoperable due to changes in the versions of packages installed on your <code>base</code> environment over time. In addition, while there methods to generate the specification file after the development phase of the project, these methods are prone to error and can lead to difficulty in reproducing or deploying the developed solution.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Long story short - if your project is using <code>conda</code>, then use <code>conda</code> to manage all packages that are available in the Anaconda package index to get the full value from the environment solver. If your required packages are among the tens of thousands in PyPI but not in the Anaconda package index, then include a <code>pip</code> requirements section in your environment specification. If your project is using <code>venv</code> or another of the Python-centric tools discussed above, you’ll have to use <code>pip</code> and <code>conda</code> will not be an option.</p>
-</div>
-</div>
 
 
 </section>
