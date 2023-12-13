@@ -2,7 +2,7 @@
 title: "Package and Environment Managers"
 ---
 
-Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (*dependency hell*).
+Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (*dependency hell*). In this section, we provide entry-level guidance, with links to more advanced discussions, for some of the most popular options.
 
 ## Python Package Index
 The [Python Package Index (PyPI)](https://pypi.org/) is a public repository of Python software developed by over 750 thousand users worldwide. It includes more than half-a-million projects. Generally, whichever PEM you use, it will ultimately pull the required Python software from PyPI in one form or another (wheels, source distributions or binaries).
