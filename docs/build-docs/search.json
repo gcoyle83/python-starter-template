@@ -1,38 +1,52 @@
 [
   {
-    "objectID": "tutorials/conda-env.html",
-    "href": "tutorials/conda-env.html",
-    "title": "Getting Started with VS Code",
+    "objectID": "tools/pem-anaconda.html",
+    "href": "tools/pem-anaconda.html",
+    "title": "Install Anaconda",
     "section": "",
-    "text": "This page is intended as primer/SOP for installing and configuring VS Code for a generic Python project.\nThe primary steps covered here are:"
+    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features - including a degree of support for R. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
   },
   {
-    "objectID": "tutorials/conda-env.html#install-vs-code",
-    "href": "tutorials/conda-env.html#install-vs-code",
-    "title": "Getting Started with VS Code",
-    "section": "Install VS Code",
-    "text": "Install VS Code\nVS Code can be installed simply from the product’s main download page. Simply select the operating system for your machine and run the installer: - Accept the license agreement; - Accept default options for install destination; - Accept default Start Menu location; - Under “Select Additional Tasks”, keep the default selections and also select the two options to add “Open with Code” actions to Windows Explorer menus (this will make life easier), and (optionally) create a desktop icon;"
-  },
-  {
-    "objectID": "tutorials/conda-env.html#install-extensions",
-    "href": "tutorials/conda-env.html#install-extensions",
-    "title": "Getting Started with VS Code",
-    "section": "Install Extensions",
-    "text": "Install Extensions\nOnce VS Code is installed on your machine, open it and navigate on the left menu bar to the Extensions blade (it looks like a Tetris game), or use the keyboard shortcut (Ctrl+Shift+X) instead. Use the search bar to find the desired extensions:\n\nPython - This extension (make sure to select the extension from Microsoft, not others) includes Intellisense (autocompletion, syntax checking), tools for linting (Pylint, Flake8), debugging, code formatting (black, autopep), refactoring, integrated unit tests (unittest, pytest) and more. Join 100M other users taking advantage of these features."
-  },
-  {
-    "objectID": "tutorials/conda-env.html#basic-usage",
-    "href": "tutorials/conda-env.html#basic-usage",
-    "title": "Getting Started with VS Code",
-    "section": "Basic Usage",
-    "text": "Basic Usage\nIn this section we’ll walk through some basic usage steps, setting up some additional features along the way.\n\nOnce VS Code is installed, use the Accounts icon at the bottom left of the window to log in to your GitHub account through VS Code, following any multi-factor authentication steps indicated.\nClone the Python project starter template repo from GitHub:\n\nUse the Ctrl+Shift+P shortcut to activate the command pallette (use Esc to exit it as needed)\nSearch the pallette for ‘Terminal’ and select the Terminal: Create New Terminal option that appears\nNote that the terminal “opens” as a vertical split in the VS Code window - it is always accessible (or minimizable) by sliding this vertical separator up or down as desired\ncd and/or mkdir to a desired directory\nEnter the command git clone git@github.com:gcoyle83/quarto-example-site.git, and enter authentication information as required (add SSH keygen instructions)\n\nWhen you open a VS Code window directly from a folder, the root of the project Explorer is at that folder; it is often helpful when working on multiple projects to open separate VS Code windows for each project, using the “Open with VS Code” action accessible from the right-click context menu in Windows Explorer.\n\nNavigate to the repo location in Windows Explorer\nRight click on the repo directory\nSelect “Open with Code”, and note the root directory\nIn VS Code, select the source control blade (or use the strange Ctrl+Shift+G followed with g shortcut)\nExpand the Branches section of the blade and note that one branch (main) is shown\nExpand the Remotes section of the blade and then expand the origin to show all available branches\nHover over the website branch and note the several icons that appear on the right side\nHover over the first of these icons and note that it says “Switch to branch” - this is the same as the git switch command, but it also fetches it if it’s not currently in the local\nSelect the switch icon to switch to the website branch; enter a local branch name or use the remote name to track locally (just press enter)\nObserve that the branch is added to the Branches blade, and has a check-mark next to it\nHover over the check-mark; observe that the popup information is the same as would be returned by git status on the command line\nReturn to the Explorer blade (Ctrl+Shift+E), and note that the files shown now reflect the Quarto website content\nOpen the about.qmd file, and add your name to the list in the Development Group Members section of the page, then save your changes (Ctrl+S)\nReturn to the source control blade (Ctrl+Shift+G + g)\nExpand the source control section, and note that there is a change pending\nHover over the “Changes” list, and then over each of the three resulting icons - they are stash, discard and stage command buttons - note also that the individual files are listed with similar buttons to revert or stage changes file-by-file; use the “Stage All Changes” button to stage your changes\nType a useful commit message and press the green Commit button\nClick the green Sync Changes button to sync with the remote GitHub repo"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "tools/pem-anaconda.html#anaconda",
+    "href": "tools/pem-anaconda.html#anaconda",
+    "title": "Install Anaconda",
     "section": "",
-    "text": "The Python Development Group is an informal team of associates from various practices that make regular use of Python to improve and/or accelerate their workflows. Recognizing that we all face similar issues in selecting and learning about various “pieces” of the Python development process, we elected to work together toward pooling our collective experience through regular (monthly) discussion of best practices and generation of documentation around what works (or notably doesn’t work) well for Python projects.\n\nDevelopment Group Members\nThe Python Dev Group members are voluntary and unofficial. If you are interested in joining the group to participate in these discussions, please reach out to a current team member and let them know.\n\nGreg Coyle\n\n\n\n\n\n Back to top"
+    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features - including a degree of support for R. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
+  },
+  {
+    "objectID": "tools/pkg-env-manager.html",
+    "href": "tools/pkg-env-manager.html",
+    "title": "Package and Environment Managers",
+    "section": "",
+    "text": "Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (dependency hell). In this section, we provide entry-level guidance, with links to more advanced discussions, for some of the most popular options."
+  },
+  {
+    "objectID": "tools/pkg-env-manager.html#python-package-index",
+    "href": "tools/pkg-env-manager.html#python-package-index",
+    "title": "Package and Environment Managers",
+    "section": "Python Package Index",
+    "text": "Python Package Index\nThe Python Package Index (PyPI) is a public repository of Python software developed by over 750 thousand users worldwide. It includes more than half-a-million projects. Generally, whichever PEM you use, it will ultimately pull the required Python software from PyPI in one form or another (wheels, source distributions or binaries)."
+  },
+  {
+    "objectID": "tools/pkg-env-manager.html#pip",
+    "href": "tools/pkg-env-manager.html#pip",
+    "title": "Package and Environment Managers",
+    "section": "pip",
+    "text": "pip\nThe most popular tool for installing Python packages is pip. It provides features for finding, downloading and installing packages from PyPI and other Python package indexes. It provides a simple command-line interface (CLI) that can be leveraged in many other tools, from shell scripts to conda environment specifications. That said, pip does have some major limitations, including:\n\npip provides wheels or source distributions, which can have pre-conditions to successful installation, including specific compilers, pre-installed libraries, et cetera\npip installs packages serially, and so may result in different environments depending on the order in which packages are installed (i.e., it has no ‘environment solver’ as described in the Anaconda section, below)\npip cannot install Python interpreters (Python is a precondition for running pip)\npip can only install Python packages - no other software languages are supported"
+  },
+  {
+    "objectID": "tools/pkg-env-manager.html#venv",
+    "href": "tools/pkg-env-manager.html#venv",
+    "title": "Package and Environment Managers",
+    "section": "Venv",
+    "text": "Venv\nvenv is a core module in Python, and thus the official environment manager of Python. It enables creating “virtual environments” - essentially a distinct set of directories containing all of the necessary Python software to run a given project - that each have their own set of Python packages installed in their site directories. A venv is created on top of an existing Python installation (known as the ‘base’ Python), the version of which can be specified at time of creation. A venv may be created from a requirements.txt file that specifies the required packages and their versions. An example of using venv to manage a project’s requirements is included as a part of the BC internal python-starter-template, documented here.\nDespite venv’s capability for successful environment management, it still depends upon pip for dependency management, and so remains vulnerable to the same potential failure points. Additional packages have been developed to resolve these issues in a Python-centric manner (i.e., with no concern for non-Python software packages that may be required by a project). These packages are very useful for “pure Python” projects with no additional software dependencies (C++/R/Java, etc):\n\nvirtualenv\npipenv\npoetry\nhatch\n\nFor present purposes, the reader is referred to the above packages’ documentation for further instruction on usage."
+  },
+  {
+    "objectID": "tools/pkg-env-manager.html#anacondaminiconda",
+    "href": "tools/pkg-env-manager.html#anacondaminiconda",
+    "title": "Package and Environment Managers",
+    "section": "Anaconda/Miniconda",
+    "text": "Anaconda/Miniconda\nAnaconda is a company focused on providing tools, platforms and services supporting the development of open-source software, specifically scientific software often created by non-profit organizations. The Anaconda Distribution is a particular, curated set of open-source software - consisting primarily of Python and R packages - that provides a foundational starting point for training in advanced scientific computing, analytics and data science. The Anaconda Distribution is often how newer Python users first get onboarded, as it is quite simple and so quite popular in academic circles.\nAnaconda also has its own Anaconda package index which draws from PyPI, the Comprehensive R Archive Network (CRAN), and other sources to provide binaries of popular software used in the Anaconda community. The Anaconda package index has standardized methods for cataloguing registered software packages in various supported languages and tracking new releases to these packages in their native package indexes, providing automated updates with new binaries for new releases.\nThe core of Anaconda is a particular library called conda - this is the part of the distribution that provides the core functionality to search the Anaconda package index for software packages, download and install them, either in the “base” environment or in Anaconda’s version of a virtual environment called a conda environment. See the Setting up a conda environment tutorial for an example of using a conda specification file to create a reproducible project environment. Anaconda has provided a very useful discussion of the differences between pip and conda here, specifically because there is often confusion around when to use one or the other, and how the two tools are distinguished.\nPerhaps most importantly, the conda library includes a “satisfiability solver”/“environment solver” that automatically identifies potential dependency conflicts among a set of requested packages and finds the most up-to-date set of packages that meet all requirements. For instance, suppose you want to install a package that does one thing (call it package A), which depends on a specific version of another package B (say version B.4 through B.12). You also need another package C that in turn requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With projects requiring many packages, this can become quite a bottleneck in the development process. Recent improvements to the core environment solver have been released in a separate project, called the Libmamba project, that can be used to greatly accelerate the environment solver and speed up the process of installing the requirements for new projects.\nAnaconda also comes with many pre-installed packages with dependencies already installed. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at the cost of a large (3 GB) memory footprint, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\n\n\n\n\n\n\nInstalling Anaconda on BC machines\n\n\n\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\n\n\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines.\nRegardless of your choice to use the Anaconda or Miniconda installation option, if you are using either you will be using the conda package to create, manage and access your environments. It is highly recommended to do so using the YAML conda environment specification, as presented in the Setting up a conda environment tutorial. This is because the YAML specification provides a human-readable, easily shareable, and executable set of instructions in a single file to easily reproduce the project environment. Using these specifications to create many distinct project environments has other advantages, too. If instead the base environment is modified when working on a new project, it is likely - if not certain - that your prior projects will become inoperable due to changes in the versions of packages installed on your base environment over time. In addition, while there methods to generate the specification file after the development phase of the project, these methods are prone to error and can lead to difficulty in reproducing or deploying the developed solution.\n\n\n\n\n\n\nTip\n\n\n\nLong story short - if your project is using conda, then use conda to manage all packages that are available in the Anaconda package index to get the full value from the environment solver. If your required packages are among the tens of thousands in PyPI but not in the Anaconda package index, then include a pip requirements section in your environment specification. If your project is using venv or another of the Python-centric tools discussed above, you’ll have to use pip and conda will not be an option."
   },
   {
     "objectID": "tools/containers.html",
@@ -70,132 +84,6 @@
     "text": "Helm\nis…"
   },
   {
-    "objectID": "tools/pkg-env-manager.html",
-    "href": "tools/pkg-env-manager.html",
-    "title": "Package and Environment Managers",
-    "section": "",
-    "text": "Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (dependency hell)."
-  },
-  {
-    "objectID": "tools/pkg-env-manager.html#python-package-index",
-    "href": "tools/pkg-env-manager.html#python-package-index",
-    "title": "Package and Environment Managers",
-    "section": "Python Package Index",
-    "text": "Python Package Index\nThe Python Package Index (PyPI) is a public repository of Python software developed by over 750 thousand users worldwide. It includes more than half-a-million projects. Generally, whichever PEM you use, it will ultimately pull the required Python software from PyPI in one form or another (wheels, source distributions or binaries)."
-  },
-  {
-    "objectID": "tools/pkg-env-manager.html#pip",
-    "href": "tools/pkg-env-manager.html#pip",
-    "title": "Package and Environment Managers",
-    "section": "pip",
-    "text": "pip\nThe most popular tool for installing Python packages is pip. It provides features for finding, downloading and installing packages from PyPI and other Python package indexes. It provides a simple command-line interface (CLI) that can be leveraged in many other tools, from shell scripts to conda environment specifications. That said, pip does have some major limitations, including:\n\npip provides wheels or source distributions, which can have pre-conditions to successful installation, including specific compilers, pre-installed libraries, et cetera\npip installs packages serially, and so may result in different environments depending on the order in which packages are installed (i.e., it has no ‘environment solver’ as described in the Anaconda section, below)\npip cannot install Python interpreters (Python is a precondition for running pip)\npip can only install Python packages - no other software languages are supported"
-  },
-  {
-    "objectID": "tools/pkg-env-manager.html#venv",
-    "href": "tools/pkg-env-manager.html#venv",
-    "title": "Package and Environment Managers",
-    "section": "Venv",
-    "text": "Venv\nvenv is a core module in Python, and thus the official environment manager of Python. It enables creating “virtual environments” - essentially a distinct set of directories containing all of the necessary Python software to run a given project - that each have their own set of Python packages installed in their site directories. A venv is created on top of an existing Python installation (known as the ‘base’ Python), the version of which can be specified at time of creation. A venv may be created from a requirements.txt file that specifies the required packages and their versions. An example of using venv to manage a project’s requirements is included as a part of the BC internal python-starter-template, documented here.\nDespite venv’s capability for successful environment management, it still depends upon pip for dependency management, and so remains vulnerable to the same potential failure points. Additional packages have been developed to resolve these issues in a Python-centric manner (i.e., with no concern for non-Python software packages that may be required by a project). These packages are very useful for “pure Python” projects with no additional software dependencies (C++/R/Java, etc):\n\nvirtualenv\npipenv\npoetry\nhatch\n\nFor present purposes, the reader is referred to the above packages’ documentation for further instruction on usage."
-  },
-  {
-    "objectID": "tools/pkg-env-manager.html#anacondaminiconda",
-    "href": "tools/pkg-env-manager.html#anacondaminiconda",
-    "title": "Package and Environment Managers",
-    "section": "Anaconda/Miniconda",
-    "text": "Anaconda/Miniconda\nAnaconda is a company focused on providing tools, platforms and services supporting the development of open-source software, specifically scientific software often created by non-profit organizations. The Anaconda Distribution is a particular, curated set of open-source software - consisting primarily of Python and R packages - that provides a foundational starting point for training in advanced scientific computing, analytics and data science. The Anaconda Distribution is often how newer Python users first get onboarded, as it is quite simple and so quite popular in academic circles.\nAnaconda also has its own Anaconda package index which draws from PyPI, the Comprehensive R Archive Network (CRAN), and other sources to provide binaries of popular software used in the Anaconda community. The Anaconda package index has standardized methods for cataloguing registered software packages in various supported languages and tracking new releases to these packages in their native package indexes, providing automated updates with new binaries for new releases.\nThe core of Anaconda is a particular library called conda - this is the part of the distribution that provides the core functionality to search the Anaconda package index for software packages, download and install them, either in the “base” environment or in Anaconda’s version of a virtual environment called a conda environment. See the Setting up a conda environment tutorial for an example of using a conda specification file to create a reproducible project environment. Anaconda has provided a very useful discussion of the differences between pip and conda here, specifically because there is often confusion around when to use one or the other, and how the two tools are distinguished.\nPerhaps most importantly, the conda library includes a “satisfiability solver”/“environment solver” that automatically identifies potential dependency conflicts among a set of requested packages and finds the most up-to-date set of packages that meet all requirements. For instance, suppose you want to install a package that does one thing (call it package A), which depends on a specific version of another package B (say version B.4 through B.12). You also need another package C that in turn requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With projects requiring many packages, this can become quite a bottleneck in the development process. Recent improvements to the core environment solver have been released in a separate project, called the Libmamba project, that can be used to greatly accelerate the environment solver and speed up the process of installing the requirements for new projects.\nAnaconda also comes with many pre-installed packages with dependencies already installed. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at the cost of a large (3 GB) memory footprint, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\n\n\n\n\n\n\nInstalling Anaconda on BC machines\n\n\n\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\n\n\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines.\nRegardless of your choice to use the Anaconda or Miniconda installation option, if you are using either you will be using the conda package to create, manage and access your environments. It is highly recommended to do so using the YAML conda environment specification, as presented in the Setting up a conda environment tutorial. This is because the YAML specification provides a human-readable, easily shareable, and executable set of instructions in a single file to easily reproduce the project environment. Using these specifications to create many distinct project environments has other advantages, too. If instead the base environment is modified when working on a new project, it is likely - if not certain - that your prior projects will become inoperable due to changes in the versions of packages installed on your base environment over time. In addition, while there methods to generate the specification file after the development phase of the project, these methods are prone to error and can lead to difficulty in reproducing or deploying the developed solution.\n\n\n\n\n\n\nTip\n\n\n\nLong story short - if your project is using conda, then use conda to manage all packages that are available in the Anaconda package index to get the full value from the environment solver. If your required packages are among the tens of thousands in PyPI but not in the Anaconda package index, then include a pip requirements section in your environment specification. If your project is using venv or another of the Python-centric tools discussed above, you’ll have to use pip and conda will not be an option."
-  },
-  {
-    "objectID": "tools/pem-anaconda.html",
-    "href": "tools/pem-anaconda.html",
-    "title": "Install Anaconda",
-    "section": "",
-    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features - including a degree of support for R. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
-  },
-  {
-    "objectID": "tools/pem-anaconda.html#anaconda",
-    "href": "tools/pem-anaconda.html#anaconda",
-    "title": "Install Anaconda",
-    "section": "",
-    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features - including a degree of support for R. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
-  },
-  {
-    "objectID": "tools/overview.html",
-    "href": "tools/overview.html",
-    "title": "Development Tools",
-    "section": "",
-    "text": "There are many useful Python development tools, and we do not pretend to know them all. This section of the site offers guidance on which tools to use to get started and is based purely on our present abilities to provide guidance rather than any claims of one tool being better than any other. The tools identified and summarized here are selected based on current usage and willingness of a team member to share their knowledge here. If you like a tool that is not included in this section, please contribute content to improve the coverage here."
-  },
-  {
-    "objectID": "tools/overview.html#integrated-development-environments",
-    "href": "tools/overview.html#integrated-development-environments",
-    "title": "Development Tools",
-    "section": "Integrated Development Environments",
-    "text": "Integrated Development Environments\nIntegrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The recommended IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder. Read on…"
-  },
-  {
-    "objectID": "tools/overview.html#package-and-environment-managemers",
-    "href": "tools/overview.html#package-and-environment-managemers",
-    "title": "Development Tools",
-    "section": "Package and Environment Managemers",
-    "text": "Package and Environment Managemers\nPython packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (dependency hell). Read on…"
-  },
-  {
-    "objectID": "tools/overview.html#version-control-systems",
-    "href": "tools/overview.html#version-control-systems",
-    "title": "Development Tools",
-    "section": "Version Control Systems",
-    "text": "Version Control Systems\nA Version Control System (VCS) is a database system for tracking changes to a filesystem over time. There are many types of VCSs that have been developed over the years. There is an “interesting” history of version control available from Git for those interested in exploring the weeds of yesteryear. For others, it’s probably sufficient to point to the currently available systems and provide a brief summary of each. Read on…"
-  },
-  {
-    "objectID": "tools/overview.html#documentation",
-    "href": "tools/overview.html#documentation",
-    "title": "Development Tools",
-    "section": "Documentation",
-    "text": "Documentation\nDocumentation is a vital part of any Python project. See the documentation tools page for a review of using some recommended tools for documenting your projects."
-  },
-  {
-    "objectID": "tools/overview.html#containerization",
-    "href": "tools/overview.html#containerization",
-    "title": "Development Tools",
-    "section": "Containerization",
-    "text": "Containerization\nPackage and environment management is necessary but insufficient to ensure reproducible projects. Environments run on operating systems, which run on real or virtual machines. Containerization is a technology developed to support reproducibility and virtualization (at scale) of operating systems. Read on…"
-  },
-  {
-    "objectID": "tools/pem-miniconda.html",
-    "href": "tools/pem-miniconda.html",
-    "title": "Install Miniconda",
-    "section": "",
-    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
-  },
-  {
-    "objectID": "tools/pem-miniconda.html#anacondaminiconda",
-    "href": "tools/pem-miniconda.html#anacondaminiconda",
-    "title": "Install Miniconda",
-    "section": "",
-    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
-  },
-  {
-    "objectID": "tools/version-control.html",
-    "href": "tools/version-control.html",
-    "title": "Version Control Systems",
-    "section": "",
-    "text": "A Version Control System (VCS) is a database system for tracking changes to filesystem over time. There are many types of VCSs that have been developed over the years. There is an “interesting” history of version control available from Git for those interested in exploring the weeds of yesteryear. For others, it’s probably sufficient to point to the currently available systems and provide a brief summary of each. It is worth noting, however, that Git is the preferred choice of this group, as evident by the fact that this repo is hosted on GitHub."
-  },
-  {
-    "objectID": "tools/version-control.html#git",
-    "href": "tools/version-control.html#git",
-    "title": "Version Control Systems",
-    "section": "Git",
-    "text": "Git\nMore to come …"
-  },
-  {
-    "objectID": "tools/version-control.html#bitbucket",
-    "href": "tools/version-control.html#bitbucket",
-    "title": "Version Control Systems",
-    "section": "Bitbucket",
-    "text": "Bitbucket\nMore to come …"
-  },
-  {
     "objectID": "tools/documentation.html",
     "href": "tools/documentation.html",
     "title": "Documentation",
@@ -217,11 +105,32 @@
     "text": "Quarto\nThe current setup no longer requires installation of Quarto on your local machine. However, Quarto is still a useful tool on its own. To install, visit the Quarto install page and follow instructions for your operating system. A sub-page will be created soon for more information.\nExample testing code include:\ndef python_version():\n    version_string = sys.version.split(\" \")[0].split(\".\")\n    major = version_string[0]\n    minor = version_string[1]\n    patch = version_string[2]\n\n    return (major, minor, patch)"
   },
   {
-    "objectID": "tools/integrated-dev-envs.html",
-    "href": "tools/integrated-dev-envs.html",
-    "title": "Integrated Development Environments",
+    "objectID": "tutorials/conda-env.html",
+    "href": "tutorials/conda-env.html",
+    "title": "Getting Started with VS Code",
     "section": "",
-    "text": "Integrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The recommended IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder.\n\nVS Code\nVisual Studio Code (VS Code) is a free, multi-platform, multi-language IDE developed by Microsoft and is popularly used by software engineers for developing solutions in numerous languages. The VS Code extensions ecosystem is large and active - there are extensions for linting, formatting, source control, containerization, cloud computing services and much (much) more.\nReady to give it a try? See our primer on installing and setting up VS Code to effectively collaborate on Python development projects.\n\n\nOthers\nFeel free to add short descriptions of your favorite IDE and link to a primer page here.\n\n\n\n\n Back to top"
+    "text": "This page is intended as primer/SOP for installing and configuring VS Code for a generic Python project.\nThe primary steps covered here are:"
+  },
+  {
+    "objectID": "tutorials/conda-env.html#install-vs-code",
+    "href": "tutorials/conda-env.html#install-vs-code",
+    "title": "Getting Started with VS Code",
+    "section": "Install VS Code",
+    "text": "Install VS Code\nVS Code can be installed simply from the product’s main download page. Simply select the operating system for your machine and run the installer: - Accept the license agreement; - Accept default options for install destination; - Accept default Start Menu location; - Under “Select Additional Tasks”, keep the default selections and also select the two options to add “Open with Code” actions to Windows Explorer menus (this will make life easier), and (optionally) create a desktop icon;"
+  },
+  {
+    "objectID": "tutorials/conda-env.html#install-extensions",
+    "href": "tutorials/conda-env.html#install-extensions",
+    "title": "Getting Started with VS Code",
+    "section": "Install Extensions",
+    "text": "Install Extensions\nOnce VS Code is installed on your machine, open it and navigate on the left menu bar to the Extensions blade (it looks like a Tetris game), or use the keyboard shortcut (Ctrl+Shift+X) instead. Use the search bar to find the desired extensions:\n\nPython - This extension (make sure to select the extension from Microsoft, not others) includes Intellisense (autocompletion, syntax checking), tools for linting (Pylint, Flake8), debugging, code formatting (black, autopep), refactoring, integrated unit tests (unittest, pytest) and more. Join 100M other users taking advantage of these features."
+  },
+  {
+    "objectID": "tutorials/conda-env.html#basic-usage",
+    "href": "tutorials/conda-env.html#basic-usage",
+    "title": "Getting Started with VS Code",
+    "section": "Basic Usage",
+    "text": "Basic Usage\nIn this section we’ll walk through some basic usage steps, setting up some additional features along the way.\n\nOnce VS Code is installed, use the Accounts icon at the bottom left of the window to log in to your GitHub account through VS Code, following any multi-factor authentication steps indicated.\nClone the Python project starter template repo from GitHub:\n\nUse the Ctrl+Shift+P shortcut to activate the command pallette (use Esc to exit it as needed)\nSearch the pallette for ‘Terminal’ and select the Terminal: Create New Terminal option that appears\nNote that the terminal “opens” as a vertical split in the VS Code window - it is always accessible (or minimizable) by sliding this vertical separator up or down as desired\ncd and/or mkdir to a desired directory\nEnter the command git clone git@github.com:gcoyle83/quarto-example-site.git, and enter authentication information as required (add SSH keygen instructions)\n\nWhen you open a VS Code window directly from a folder, the root of the project Explorer is at that folder; it is often helpful when working on multiple projects to open separate VS Code windows for each project, using the “Open with VS Code” action accessible from the right-click context menu in Windows Explorer.\n\nNavigate to the repo location in Windows Explorer\nRight click on the repo directory\nSelect “Open with Code”, and note the root directory\nIn VS Code, select the source control blade (or use the strange Ctrl+Shift+G followed with g shortcut)\nExpand the Branches section of the blade and note that one branch (main) is shown\nExpand the Remotes section of the blade and then expand the origin to show all available branches\nHover over the website branch and note the several icons that appear on the right side\nHover over the first of these icons and note that it says “Switch to branch” - this is the same as the git switch command, but it also fetches it if it’s not currently in the local\nSelect the switch icon to switch to the website branch; enter a local branch name or use the remote name to track locally (just press enter)\nObserve that the branch is added to the Branches blade, and has a check-mark next to it\nHover over the check-mark; observe that the popup information is the same as would be returned by git status on the command line\nReturn to the Explorer blade (Ctrl+Shift+E), and note that the files shown now reflect the Quarto website content\nOpen the about.qmd file, and add your name to the list in the Development Group Members section of the page, then save your changes (Ctrl+S)\nReturn to the source control blade (Ctrl+Shift+G + g)\nExpand the source control section, and note that there is a change pending\nHover over the “Changes” list, and then over each of the three resulting icons - they are stash, discard and stage command buttons - note also that the individual files are listed with similar buttons to revert or stage changes file-by-file; use the “Stage All Changes” button to stage your changes\nType a useful commit message and press the green Commit button\nClick the green Sync Changes button to sync with the remote GitHub repo"
   },
   {
     "objectID": "index.html#create-a-new-repo-from-this-template",
@@ -273,6 +182,13 @@
     "text": "Documentation\nAnother critical component of any well-developed Python project is, of course, documentation. For this template, the documentation is written/edited in the docs directory (by humans) and is then automatically rendered into a website stored in the build-docs folder during the fully automated build process. More details on this procedure are included in the documentation tools page."
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The Python Development Group is an informal team of associates from various practices that make regular use of Python to improve and/or accelerate their workflows. Recognizing that we all face similar issues in selecting and learning about various “pieces” of the Python development process, we elected to work together toward pooling our collective experience through regular (monthly) discussion of best practices and generation of documentation around what works (or notably doesn’t work) well for Python projects.\n\nDevelopment Group Members\nThe Python Dev Group members are voluntary and unofficial. If you are interested in joining the group to participate in these discussions, please reach out to a current team member and let them know.\n\nGreg Coyle\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "tutorials/vscode-primer.html",
     "href": "tutorials/vscode-primer.html",
     "title": "Getting Started with VS Code",
@@ -299,5 +215,89 @@
     "title": "Getting Started with VS Code",
     "section": "Basic Usage",
     "text": "Basic Usage\nIn this section we’ll walk through some basic usage steps, setting up some additional features along the way.\n\nOnce VS Code is installed, use the Accounts icon at the bottom left of the window to log in to your GitHub account through VS Code, following any multi-factor authentication steps indicated.\nClone the Python project starter template repo from GitHub:\n\nUse the Ctrl+Shift+P shortcut to activate the command pallette (use Esc to exit it as needed)\nSearch the pallette for ‘Terminal’ and select the Terminal: Create New Terminal option that appears\nNote that the terminal “opens” as a vertical split in the VS Code window - it is always accessible (or minimizable) by sliding this vertical separator up or down as desired\ncd and/or mkdir to a desired directory\nEnter the command git clone git@github.com:gcoyle83/quarto-example-site.git, and enter authentication information as required (add SSH keygen instructions)\n\nWhen you open a VS Code window directly from a folder, the root of the project Explorer is at that folder; it is often helpful when working on multiple projects to open separate VS Code windows for each project, using the “Open with VS Code” action accessible from the right-click context menu in Windows Explorer.\n\nNavigate to the repo location in Windows Explorer\nRight click on the repo directory\nSelect “Open with Code”, and note the root directory\nIn VS Code, select the source control blade (or use the strange Ctrl+Shift+G followed with g shortcut)\nExpand the Branches section of the blade and note that one branch (main) is shown\nExpand the Remotes section of the blade and then expand the origin to show all available branches\nHover over the website branch and note the several icons that appear on the right side\nHover over the first of these icons and note that it says “Switch to branch” - this is the same as the git switch command, but it also fetches it if it’s not currently in the local\nSelect the switch icon to switch to the website branch; enter a local branch name or use the remote name to track locally (just press enter)\nObserve that the branch is added to the Branches blade, and has a check-mark next to it\nHover over the check-mark; observe that the popup information is the same as would be returned by git status on the command line\nReturn to the Explorer blade (Ctrl+Shift+E), and note that the files shown now reflect the Quarto website content\nOpen the about.qmd file, and add your name to the list in the Development Group Members section of the page, then save your changes (Ctrl+S)\nReturn to the source control blade (Ctrl+Shift+G + g)\nExpand the source control section, and note that there is a change pending\nHover over the “Changes” list, and then over each of the three resulting icons - they are stash, discard and stage command buttons - note also that the individual files are listed with similar buttons to revert or stage changes file-by-file; use the “Stage All Changes” button to stage your changes\nType a useful commit message and press the green Commit button\nClick the green Sync Changes button to sync with the remote GitHub repo"
+  },
+  {
+    "objectID": "tools/integrated-dev-envs.html",
+    "href": "tools/integrated-dev-envs.html",
+    "title": "Integrated Development Environments",
+    "section": "",
+    "text": "Integrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The recommended IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder.\n\nVS Code\nVisual Studio Code (VS Code) is a free, multi-platform, multi-language IDE developed by Microsoft and is popularly used by software engineers for developing solutions in numerous languages. The VS Code extensions ecosystem is large and active - there are extensions for linting, formatting, source control, containerization, cloud computing services and much (much) more.\nReady to give it a try? See our primer on installing and setting up VS Code to effectively collaborate on Python development projects.\n\n\nOthers\nFeel free to add short descriptions of your favorite IDE and link to a primer page here.\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "tools/overview.html",
+    "href": "tools/overview.html",
+    "title": "Development Tools",
+    "section": "",
+    "text": "There are many useful Python development tools, and we do not pretend to know them all. This section of the site offers guidance on which tools to use to get started and is based purely on our present abilities to provide guidance rather than any claims of one tool being better than any other. The tools identified and summarized here are selected based on current usage and willingness of a team member to share their knowledge here. If you like a tool that is not included in this section, please contribute content to improve the coverage here."
+  },
+  {
+    "objectID": "tools/overview.html#integrated-development-environments",
+    "href": "tools/overview.html#integrated-development-environments",
+    "title": "Development Tools",
+    "section": "Integrated Development Environments",
+    "text": "Integrated Development Environments\nIntegrated Development Environments (IDEs) are the workhorse for efficient software development, whether doing simple scripting or developing complex machine learning systems. The recommended IDE for Python development at present is VS Code, in the sense that current contributors to this content use VS Code and have more knowledge to share about VS Code than other IDEs such as, for example, PyCharm or Spyder. Read on…"
+  },
+  {
+    "objectID": "tools/overview.html#package-and-environment-managemers",
+    "href": "tools/overview.html#package-and-environment-managemers",
+    "title": "Development Tools",
+    "section": "Package and Environment Managemers",
+    "text": "Package and Environment Managemers\nPython packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (dependency hell). Read on…"
+  },
+  {
+    "objectID": "tools/overview.html#version-control-systems",
+    "href": "tools/overview.html#version-control-systems",
+    "title": "Development Tools",
+    "section": "Version Control Systems",
+    "text": "Version Control Systems\nA Version Control System (VCS) is a database system for tracking changes to a filesystem over time. There are many types of VCSs that have been developed over the years. There is an “interesting” history of version control available from Git for those interested in exploring the weeds of yesteryear. For others, it’s probably sufficient to point to the currently available systems and provide a brief summary of each. Read on…"
+  },
+  {
+    "objectID": "tools/overview.html#documentation",
+    "href": "tools/overview.html#documentation",
+    "title": "Development Tools",
+    "section": "Documentation",
+    "text": "Documentation\nDocumentation is a vital part of any Python project. See the documentation tools page for a review of using some recommended tools for documenting your projects."
+  },
+  {
+    "objectID": "tools/overview.html#containerization",
+    "href": "tools/overview.html#containerization",
+    "title": "Development Tools",
+    "section": "Containerization",
+    "text": "Containerization\nPackage and environment management is necessary but insufficient to ensure reproducible projects. Environments run on operating systems, which run on real or virtual machines. Containerization is a technology developed to support reproducibility and virtualization (at scale) of operating systems. Read on…"
+  },
+  {
+    "objectID": "tools/version-control.html",
+    "href": "tools/version-control.html",
+    "title": "Version Control Systems",
+    "section": "",
+    "text": "A Version Control System (VCS) is a database system for tracking changes to filesystem over time. There are many types of VCSs that have been developed over the years. There is an “interesting” history of version control available from Git for those interested in exploring the weeds of yesteryear. For others, it’s probably sufficient to point to the currently available systems and provide a brief summary of each. It is worth noting, however, that Git is the preferred choice of this group, as evident by the fact that this repo is hosted on GitHub."
+  },
+  {
+    "objectID": "tools/version-control.html#git",
+    "href": "tools/version-control.html#git",
+    "title": "Version Control Systems",
+    "section": "Git",
+    "text": "Git\nMore to come …"
+  },
+  {
+    "objectID": "tools/version-control.html#bitbucket",
+    "href": "tools/version-control.html#bitbucket",
+    "title": "Version Control Systems",
+    "section": "Bitbucket",
+    "text": "Bitbucket\nMore to come …"
+  },
+  {
+    "objectID": "tools/pem-miniconda.html",
+    "href": "tools/pem-miniconda.html",
+    "title": "Install Miniconda",
+    "section": "",
+    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
+  },
+  {
+    "objectID": "tools/pem-miniconda.html#anacondaminiconda",
+    "href": "tools/pem-miniconda.html#anacondaminiconda",
+    "title": "Install Miniconda",
+    "section": "",
+    "text": "Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an ‘environment solver’. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC’s, GPU clusters, et cetera).\nSee this page for a detailed presentation of steps to properly install Anaconda on BC-owned machines.\nMiniconda is a light-weight version of Anaconda that essentially only includes the conda (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like pip). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance).\nFor further considerations regarding selection of Anaconda or Miniconda for your projects, see the Anaconda documentation on this topic.\nSee the following for detailed instructions to properly install Miniconda on BC-owned machines."
   }
 ]
