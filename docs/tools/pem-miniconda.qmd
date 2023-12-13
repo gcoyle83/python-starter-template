@@ -1,0 +1,14 @@
+---
+title: "Install Miniconda"
+---
+
+## Anaconda/Miniconda
+[Anaconda]() is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer Python users first get onboarded, as it is quite simple and so quite popular. One of the key features of Anaconda is that it automates the otherwise painstaking process of dependency checks using an 'environment solver'. For instance, suppose you want to install a library that does one thing (call it library A), which depends on a specific version of another library B (say version B.4 through B.12). You also need another library C that requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With many more packages, this can become a bottleneck in the development process. Anaconda also comes with many pre-installed packages with the dependencies already sorted. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at a cost of large (3 GB) memory cost, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC's, GPU clusters, et cetera). 
+
+See [this page](./pem-anaconda.qmd) for a detailed presentation of steps to properly install Anaconda on BC-owned machines.
+
+[Miniconda]() is a light-weight version of Anaconda that essentially only includes the `conda` (environment solver) package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like `pip`). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance). 
+
+For further considerations regarding selection of Anaconda or Miniconda for your projects, see the [Anaconda documentation on this topic](https://docs.conda.io/projects/conda/en/stable/user-guide/install/download.html#anaconda-or-miniconda).
+
+See the following for detailed instructions to [properly install Miniconda on BC-owned machines](./pem-miniconda.qmd).

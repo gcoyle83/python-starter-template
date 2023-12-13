@@ -5,13 +5,52 @@ title: "Package and Environment Managers"
 Python packages are distributed by a wide number of individuals and organizations, with just-as-widely varying degrees of sophistication. Package and environment managers (PEMs) are tools that seek to help users of these Python packages resolve the inevitable web of dependencies that emerge between various packages (*dependency hell*).
 
 ## Python Package Index
-The foundation...
+The [Python Package Index (PyPI)](https://pypi.org/) is a public repository of Python software developed by over 750 thousand users worldwide. It includes more than half-a-million projects. Generally, whichever PEM you use, it will ultimately pull the required Python software from PyPI in one form or another (wheels, source distributions or binaries).
+
+## `pip`
+The most popular tool for installing Python packages is [pip](https://packaging.python.org/en/latest/key_projects/#pip). It provides features for finding, downloading and installing packages from PyPI and other Python package indexes. It provides a simple command-line interface (CLI) that can be leveraged in many other tools, from [shell scripts]() to [conda environment specifications](). That said, `pip` does have some major limitations, including: 
+
+-  `pip` provides [wheels]() or [source distributions](), which can have pre-conditions to successful installation, including specific compilers, pre-installed libraries, et cetera
+-  `pip` installs packages serially, and so may result in different environments depending on the order in which packages are installed (i.e., it has no 'environment solver' as described in the [Anaconda section, below](#anacondaminiconda))
+-  `pip` cannot install Python interpreters (Python is a precondition for running `pip`)
+-  `pip` can only install Python packages - no other software languages are supported
 
 ## Venv
-[venv](https://docs.python.org/3/library/venv.html) is a core module in Python, and the us the *official* environment manager of Python. It enables creating "virtual environments" that each have their own set of Python packages installed in their site directories. A venv is created on top of an existing Python installation (known as the 'base' Python). A venv may be created from a `requirements.txt` file that specifies the required packages and their versions.
+[venv](https://docs.python.org/3/library/venv.html) is a core module in Python, and thus the *official* environment manager of Python. It enables creating "virtual environments" - essentially a distinct set of directories containing all of the necessary Python software to run a given project - that each have their own set of Python packages installed in their site directories. A `venv` is created on top of an existing Python installation (known as the 'base' Python), the version of which can be specified at time of creation. A `venv` may be created from a `requirements.txt` file that specifies the required packages and their versions. An example of using `venv` to manage a project's requirements is included as a part of the BC internal `python-starter-template`, documented [here](../index.qmd#create-virtual-environment).
 
-## Anaconda
-Anaconda is a third-party distribution of Python that includes its own package management system, IDE, and many more features. This is often where newer (2015 on, say) Python users first get onboarded, so it is quite popular.
+Despite `venv`'s capability for successful environment management, it still depends upon `pip` for dependency management, and so remains vulnerable to the same potential failure points. Additional packages have been developed to resolve these issues in a Python-centric manner (i.e., with no concern for non-Python software packages that may be required by a project). These packages are very useful for "pure Python" projects with no additional software dependencies (C++/R/Java, etc):
 
-### Miniconda
-A lightweight variant worth knowing about...
+-  [virtualenv](https://virtualenv.pypa.io/en/latest/)
+-  [pipenv](https://pipenv.readthedocs.io/en/latest/)
+-  [poetry](https://poetry.eustace.io/)
+-  [hatch](https://github.com/ofek/hatch)
+
+For present purposes, the reader is referred to the above packages' documentation for further instruction on usage.
+
+## Anaconda/Miniconda
+[Anaconda](https://www.anaconda.com/about-us) is a company focused on providing tools, platforms and services supporting the development of open-source software, specifically scientific software often created by non-profit organizations. The [Anaconda Distribution](https://docs.anaconda.com/#distribution-packages) is a particular, curated set of open-source software - consisting primarily of Python and R packages - that provides a foundational starting point for training in advanced scientific computing, analytics and data science. The Anaconda Distribution is often how newer Python users first get onboarded, as it is quite simple and so quite popular in academic circles.
+
+Anaconda also has its own [Anaconda package index](https://anaconda.org/anaconda/repo) which draws from PyPI, the Comprehensive R Archive Network (CRAN), and other sources to provide binaries of popular software used in the Anaconda community. The Anaconda package index has standardized methods for cataloguing registered software packages in various supported languages and tracking new releases to these packages in their native package indexes, providing automated updates with new binaries for new releases.
+
+The core of Anaconda is a particular library called `conda` - this is the part of the distribution that provides the core functionality to search the Anaconda package index for software packages, download and install them, either in the "base" environment or in Anaconda's version of a virtual environment called a `conda` environment. See the [Setting up a conda environment](../tutorials/conda-env.qmd) tutorial for an example of using a conda specification file to create a reproducible project environment. Anaconda has provided a very useful discussion of the differences between `pip` and `conda` [here](https://www.anaconda.com/blog/understanding-conda-and-pip), specifically because there is often confusion around when to use one or the other, and how the two tools are distinguished.
+
+Perhaps most importantly, the `conda` library includes a "satisfiability solver"/"environment solver" that automatically identifies potential dependency conflicts among a set of requested packages and finds the most up-to-date set of packages that meet all requirements. For instance, suppose you want to install a package that does one thing (call it package A), which depends on a specific version of another package B (say version B.4 through B.12). You also need another package C that in turn requires version B.11-B.15. Anaconda automatically computes the union set (B.11, B.12) and installs the latest version in that set for your environment. With projects requiring many packages, this can become quite a bottleneck in the development process. Recent improvements to the core environment solver have been released in a separate project, called the [`Libmamba` project](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community), that can be used to greatly accelerate the environment solver and speed up the process of installing the requirements for new projects.
+
+Anaconda also comes with many pre-installed packages with dependencies already installed. These aspects of Anaconda that lead to lowering the barrier to entry in Python development come at the cost of a large (3 GB) memory footprint, which is not always appropriate for more light-weight projects, for instance when the project needs to be deployed to remote compute targets (HPC's, GPU clusters, et cetera). 
+
+:::{.callout-tip}
+## Installing Anaconda on BC machines
+See [this page](./pem-anaconda.qmd) for a detailed presentation of steps to properly install Anaconda on BC-owned machines.
+:::
+
+[Miniconda](https://docs.conda.io/projects/miniconda/en/latest/) is a light-weight version of Anaconda that essentially only includes the `conda` package, the specified version of Python, dependencies of these, and a small number of other core Python packages (like `pip`). The smaller footprint of Miniconda makes it appropriate for use on memory-limited machines (like some virtual machines, for instance). 
+
+For further considerations regarding selection of Anaconda or Miniconda for your projects, see the [Anaconda documentation on this topic](https://docs.conda.io/projects/conda/en/stable/user-guide/install/download.html#anaconda-or-miniconda).
+
+See the following for detailed instructions to [properly install Miniconda on BC-owned machines](./pem-miniconda.qmd).
+
+Regardless of your choice to use the Anaconda or Miniconda installation option, if you are using either you will be using the `conda` package to create, manage and access your environments. It is *highly recommended* to do so using the YAML conda environment specification, as presented in the [Setting up a conda environment](../tutorials/conda-env.qmd) tutorial. This is because the YAML specification provides a human-readable, easily shareable, and executable set of instructions in a single file to easily reproduce the project environment. Using these specifications to create many distinct project environments has other advantages, too. If instead the `base` environment is modified when working on a new project, it is likely - if not certain - that your prior projects will become inoperable due to changes in the versions of packages installed on your `base` environment over time. In addition, while there methods to generate the specification file after the development phase of the project, these methods are prone to error and can lead to difficulty in reproducing or deploying the developed solution.
+
+:::{.callout-tip}
+Long story short - if your project is using `conda`, then use `conda` to manage all packages that are available in the Anaconda package index to get the full value from the environment solver. If your required packages are among the tens of thousands in PyPI but not in the Anaconda package index, then include a `pip` requirements section in your environment specification. If your project is using `venv` or another of the Python-centric tools discussed above, you'll have to use `pip` and `conda` will not be an option.
+:::
