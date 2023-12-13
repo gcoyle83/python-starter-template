@@ -81,7 +81,7 @@
     "href": "tools/documentation.html#quarto",
     "title": "Documentation",
     "section": "Quarto",
-    "text": "Quarto\nThe current setup no longer requires installation of Quarto on your local machine. However, Quarto is still a useful tool on its own. To install, visit the Quarto install page and follow instructions for your operating system. A sub-page will be created soon for more information.\nExample testing code include:"
+    "text": "Quarto\nThe current setup no longer requires installation of Quarto on your local machine. However, Quarto is still a useful tool on its own. To install, visit the Quarto install page and follow instructions for your operating system. A sub-page will be created soon for more information.\nExample testing code include:\ndef python_version():\n    version_string = sys.version.split(\" \")[0].split(\".\")\n    major = version_string[0]\n    minor = version_string[1]\n    patch = version_string[2]\n\n    return (major, minor, patch)"
   },
   {
     "objectID": "tools/pkg-env-manager.html",
